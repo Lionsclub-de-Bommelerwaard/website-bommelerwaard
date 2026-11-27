@@ -2,6 +2,19 @@
   "items": [
     {
       "cat": "actie",
+      "title": "Norman en Heimen bouwen een nieuwe website voor de Lions",
+      "text": "Achter de schermen bouwen Norman en Heimen aan een nieuwe website voor Lionsclub De Bommelerwaard: overzichtelijker, beter leesbaar en met al onze activiteiten op één plek.",
+      "date": "November 2026",
+      "img": "/assets/nieuws-nieuwe-website.jpg",
+      "alt": "Heimen werkt staand aan een bureau op een laptop, met op een groot scherm de nieuwe website van de Lionsclub",
+      "pos": "50% 12%",
+      "cta": "Neem contact op",
+      "href": "/contact/",
+      "visibleFrom": "2026-11-27",
+      "visibleUntil": "2099-12-31"
+    },
+    {
+      "cat": "actie",
       "title": "12 kilo oud geld levert € 1.386 op voor Fight for Sight",
       "text": "Met de inzameling van vreemd en oud geld hebben we 12 kilo aan munten en biljetten opgehaald. Dat leverde € 1.386 op voor Lions Fight for Sight. De volledige opbrengst gaat naar oogzorg, zoals staaroperaties in ontwikkelingslanden. Dank aan iedereen die zijn oude geld inleverde!",
       "date": "November 2026",
