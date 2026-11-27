@@ -1,6 +1,19 @@
 {
   "items": [
     {
+      "cat": "evenement",
+      "title": "Al 20 deelnames voor de Koekeloeretoere 2027",
+      "text": "De inschrijving loopt hard: er zijn nu al 20 deelnames binnen voor de Koekeloeretoere van zondag 18 april 2027. Rijd jij ook mee? De opbrengst gaat naar de vaartocht voor ouderen op de Columbus.",
+      "date": "November 2026",
+      "img": "/assets/b5cedc82f3c357eafe38cb294c0cd80f.jpg",
+      "alt": "Een groene klassieke auto vertrekt bij de start van de Koekeloeretoere, terwijl een vrijwilliger met een vlag zwaait",
+      "pos": "50% 50%",
+      "cta": "Schrijf je in",
+      "href": "/koekeloeretoere/#meedoen",
+      "visibleFrom": "2026-11-27",
+      "visibleUntil": "2099-12-31"
+    },
+    {
       "cat": "actie",
       "title": "Norman en Heimen bouwen een nieuwe website voor de Lions",
       "text": "Achter de schermen bouwen Norman en Heimen aan een nieuwe website voor Lionsclub De Bommelerwaard: overzichtelijker, beter leesbaar en met al onze activiteiten op één plek.",
