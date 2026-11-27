@@ -1,6 +1,19 @@
 {
   "items": [
     {
+      "cat": "actie",
+      "title": "Norman was here from his own Mac",
+      "text": "Het is gelukt: Norman heeft Claude Code op zijn eigen Mac verbonden met de GitHub-repository website-bommelerwaard. Hij heeft de website gecloned en een nieuwe branch gemaakt, met dit nieuwsbericht als eerste wijziging. Zo kunnen we voortaan aanpassingen klaarzetten die Heimen eerst bekijkt voordat ze live gaan.",
+      "date": "November 2026",
+      "img": "/assets/nieuws-norman-was-here.jpg",
+      "alt": "Norman maakt een spiegelselfie met zijn telefoon, in een donkerblauw colbert en een lichte broek",
+      "pos": "50% 20%",
+      "cta": "Neem contact op",
+      "href": "/contact/",
+      "visibleFrom": "2026-11-27",
+      "visibleUntil": "2099-12-31"
+    },
+    {
       "cat": "evenement",
       "title": "Inschrijving Koekeloeretoere 2027 is geopend",
       "text": "Op zondag 18 april 2027 rijden we weer. Deelname kost € 85 per persoon; de opbrengst gaat naar de vaartocht voor ouderen op de Columbus.",
