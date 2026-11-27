@@ -1,0 +1,13 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Lionsclub De Bommelerwaard//NL
+BEGIN:VEVENT
+UID:koekeloeretoere-2027@lionsbommelerwaard.nl
+DTSTAMP:20261103T120000Z
+DTSTART;VALUE=DATE:20270418
+DTEND;VALUE=DATE:20270419
+SUMMARY:Koekeloeretoere 2027
+LOCATION:Bommelerwaard
+DESCRIPTION:Toertocht van Lionsclub De Bommelerwaard. Info: lionsbommelerwaard.nl
+END:VEVENT
+END:VCALENDAR

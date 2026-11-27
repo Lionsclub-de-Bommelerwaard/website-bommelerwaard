@@ -425,13 +425,6 @@ FodyWeavers.xsd
 # Official VS Code C# Dev Kit Extension exclusion
 #*.lscache
 
-# Gegenereerd door build.py – nooit committen
-site/
-
-# Exports en ontvangen zips blijven op Google Drive
-*.zip
-Ontvangen van Job/
-Exports/
 
 # Systeem
 .DS_Store

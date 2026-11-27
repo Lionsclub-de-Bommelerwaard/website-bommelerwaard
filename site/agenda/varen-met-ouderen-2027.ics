@@ -1,0 +1,13 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Lionsclub De Bommelerwaard//NL
+BEGIN:VEVENT
+UID:varen-met-ouderen-2027@lionsbommelerwaard.nl
+DTSTAMP:20261103T120000Z
+DTSTART:20270619T113000
+DTEND:20270619T153000
+SUMMARY:Varen met ouderen 2027
+LOCATION:Haven De Zandmeren, Kerkdriel
+DESCRIPTION:Vaartocht voor ouderen op de Columbus van Lionsclub De Bommelerwaard
+END:VEVENT
+END:VCALENDAR

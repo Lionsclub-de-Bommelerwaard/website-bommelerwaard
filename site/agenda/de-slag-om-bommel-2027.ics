@@ -1,0 +1,13 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Lionsclub De Bommelerwaard//NL
+BEGIN:VEVENT
+UID:slag-om-bommel-2027@lionsbommelerwaard.nl
+DTSTAMP:20261103T120000Z
+DTSTART;VALUE=DATE:20270918
+DTEND;VALUE=DATE:20270919
+SUMMARY:De Slag om Bommel 2027
+LOCATION:Zaltbommel
+DESCRIPTION:Stadsgolf voor het goede doel van Lionsclub De Bommelerwaard. Info: lionsbommelerwaard.nl
+END:VEVENT
+END:VCALENDAR
