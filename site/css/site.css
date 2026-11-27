@@ -54,3 +54,11 @@ h1,h2,h3{font-family:'Helvetica Neue Condensed','Roboto Condensed','Arial Narrow
 .lb-pack:hover{transform:translateY(-2px);box-shadow:0 12px 28px rgba(0,51,141,.16)}
 .lb-pack[aria-pressed="false"]:hover{border-color:#00338D !important}
 .lb-pack:focus-visible,.lb-topic:focus-visible{outline:3px solid #EBB700;outline-offset:3px}
+
+/* Checkboxjes: open wit vakje met blauwe rand, blauw met wit vinkje als aangevinkt */
+input[type="checkbox"]{-webkit-appearance:none;appearance:none;box-sizing:border-box;background:#FFFFFF;border:2px solid #00338D;border-radius:5px;cursor:pointer;display:inline-grid;place-content:center;transition:background-color .15s ease,border-color .15s ease}
+input[type="checkbox"]::before{content:"";width:12px;height:12px;clip-path:polygon(14% 44%,0 65%,50% 100%,100% 16%,80% 0,43% 62%);background:#FFFFFF;transform:scale(0);transition:transform .12s ease}
+input[type="checkbox"]:checked{background:#00338D}
+input[type="checkbox"]:checked::before{transform:scale(1)}
+input[type="checkbox"]:hover{border-color:#1A4AA3}
+input[type="checkbox"]:focus-visible{outline:3px solid #EBB700;outline-offset:2px}
