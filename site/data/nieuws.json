@@ -2,6 +2,19 @@
   "items": [
     {
       "cat": "club",
+      "title": "Norman en Heimen geven vanmiddag een demo aan Job",
+      "text": "Vanmiddag laten Norman en Heimen aan Job zien hoe de nieuwe website werkt: van de gele Doe mee-knop tot het toevoegen van een nieuwsbericht in een paar minuten.",
+      "date": "Vrijdag 27 november 2026",
+      "img": "/assets/nieuws-demo-job.jpg",
+      "alt": "Illustratie: drie mensen kijken naar een groot scherm met de nieuwe Lions-website en het label Demo",
+      "pos": "50% 40%",
+      "cta": "Neem contact op",
+      "href": "/contact/",
+      "visibleFrom": "2026-11-27",
+      "visibleUntil": "2099-12-31"
+    },
+    {
+      "cat": "club",
       "title": "Ingezameld vreemd en oud geld overgedragen aan Fight for Sight",
       "text": "De munten en biljetten die bij ons zijn ingeleverd, zijn overgedragen aan Lions Fight for Sight. De volledige opbrengst gaat naar oogzorg, zoals staaroperaties in ontwikkelingslanden. Dank aan iedereen die zijn oude geld inleverde!",
       "date": "November 2026",
