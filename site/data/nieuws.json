@@ -1,6 +1,19 @@
 {
   "items": [
     {
+      "cat": "actie",
+      "title": "12 kilo oud geld levert € 1.285 op voor Fight for Sight",
+      "text": "Met de inzameling van vreemd en oud geld hebben we 12 kilo aan munten en biljetten opgehaald. Dat leverde € 1.285 op voor Lions Fight for Sight. De volledige opbrengst gaat naar oogzorg, zoals staaroperaties in ontwikkelingslanden. Dank aan iedereen die zijn oude geld inleverde!",
+      "date": "November 2026",
+      "img": "/assets/nieuws-fight-for-sight.jpg",
+      "alt": "Twee Lionsleden dragen bij een auto een gele tas met ingezameld oud geld over, naast een vlag van Lions Fight for Sight",
+      "pos": "50% 40%",
+      "cta": "Zo werkt vreemd en oud geld",
+      "href": "/vreemd-en-oud-geld/",
+      "visibleFrom": "2026-11-27",
+      "visibleUntil": "2099-12-31"
+    },
+    {
       "cat": "evenement",
       "title": "Inschrijving Koekeloeretoere 2027 is geopend",
       "text": "Op zondag 18 april 2027 rijden we weer. Deelname kost € 85 per persoon; de opbrengst gaat naar de vaartocht voor ouderen op de Columbus.",
