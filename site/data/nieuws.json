@@ -1,58 +1,6 @@
 {
   "items": [
     {
-      "cat": "club",
-      "title": "Norman en Heimen geven vanmiddag een demo aan Job",
-      "text": "Vanmiddag laten Norman en Heimen aan Job zien hoe de nieuwe website werkt: van de gele Doe mee-knop tot het toevoegen van een nieuwsbericht in een paar minuten.",
-      "date": "Vrijdag 27 november 2026",
-      "img": "/assets/nieuws-demo-job.jpg",
-      "alt": "Illustratie: drie mensen kijken naar een groot scherm met de nieuwe Lions-website en het label Demo",
-      "pos": "50% 40%",
-      "cta": "Neem contact op",
-      "href": "/contact/",
-      "visibleFrom": "2026-11-27",
-      "visibleUntil": "2099-12-31"
-    },
-    {
-      "cat": "club",
-      "title": "Ingezameld vreemd en oud geld overgedragen aan Fight for Sight",
-      "text": "De munten en biljetten die bij ons zijn ingeleverd, zijn overgedragen aan Lions Fight for Sight. De volledige opbrengst gaat naar oogzorg, zoals staaroperaties in ontwikkelingslanden. Dank aan iedereen die zijn oude geld inleverde!",
-      "date": "November 2026",
-      "img": "/assets/nieuws-fight-for-sight.jpg",
-      "alt": "Twee Lionsleden dragen bij een auto een gele tas met ingezameld geld over, naast een vlag van Lions Fight for Sight",
-      "pos": "50% 40%",
-      "cta": "Zo werkt vreemd en oud geld",
-      "href": "/vreemd-en-oud-geld/",
-      "visibleFrom": "2026-11-27",
-      "visibleUntil": "2099-12-31"
-    },
-    {
-      "cat": "club",
-      "title": "Norman moet lachen om Claude Code",
-      "text": "Bij het bouwen van de nieuwe website kon Norman zijn lachen niet inhouden. Je typt in gewone taal wat je wilt, zoals 'maak de Doe mee-knop geel', en even later staat het op de site. Ook dit bericht is zo gemaakt.",
-      "date": "November 2026",
-      "img": "/assets/nieuws-norman-lacht.jpg",
-      "alt": "Illustratie: een lachende smiley naast een laptop waarop opdrachten voor de website staan, met een tekstballon 'Haha!'",
-      "pos": "50% 40%",
-      "cta": "Maak kennis met de club",
-      "href": "/over-ons/",
-      "visibleFrom": "2026-11-27",
-      "visibleUntil": "2099-12-31"
-    },
-    {
-      "cat": "club",
-      "title": "Norman en Heimen bouwen aan de nieuwe website",
-      "text": "Achter de schermen werken Norman en Heimen aan een nieuwe website voor Lionsclub De Bommelerwaard: overzichtelijker, beter leesbaar en met al onze activiteiten op één plek.",
-      "date": "November 2026",
-      "img": "/assets/nieuws-nieuwe-website.jpg",
-      "alt": "Heimen werkt staand aan een bureau op een laptop, met op een groot scherm de nieuwe website van de Lionsclub",
-      "pos": "50% 12%",
-      "cta": "Neem contact op",
-      "href": "/contact/",
-      "visibleFrom": "2026-11-27",
-      "visibleUntil": "2099-12-31"
-    },
-    {
       "cat": "evenement",
       "title": "Inschrijving Koekeloeretoere 2027 is geopend",
       "text": "Op zondag 18 april 2027 rijden we weer. Deelname kost € 85 per persoon; de opbrengst gaat naar de vaartocht voor ouderen op de Columbus.",
