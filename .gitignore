@@ -429,3 +429,4 @@ FodyWeavers.xsd
 # Systeem
 .DS_Store
 __pycache__/
+_import/
