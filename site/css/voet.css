@@ -1,0 +1,19 @@
+/*
+ * Voet van de site: footer. Op elke pagina.
+ * De classes met st- vervangen de vroegere style-attributen. Ze staan onder #dc-root, zodat ze net als
+ * inline styling voorgaan op de algemene regels in interactie.css (die met !important blijven winnen).
+ */
+
+#dc-root .st-voet-voet-1 { background: #00338D; color: #D6E0F5; font-size: 16px; }
+#dc-root .st-voet-blok-1 { max-width: 1200px; margin: 0 auto; padding: 56px 24px 32px; display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 32px; }
+#dc-root .st-voet-blok-2 { display: flex; flex-direction: column; gap: 8px; }
+#dc-root .st-voet-blok-3 { font-family: 'Helvetica Neue Condensed', 'Roboto Condensed', 'Arial Narrow', sans-serif; font-weight: 700; font-size: 18px; color: #FFFFFF; }
+#dc-root .st-voet-blok-4 { font-size: 14px; line-height: 1.6; }
+#dc-root .st-voet-link-1 { color: #EBB700; font-weight: 600; font-size: 14px; }
+#dc-root .st-voet-blok-5 { display: flex; gap: 8px; margin-top: 20px; }
+#dc-root .st-voet-icon-btn-1 { width: 44px; height: 44px; border-radius: 50%; border: 1px solid #4D73C4; display: flex; align-items: center; justify-content: center; }
+#dc-root .st-voet-blok-6 { display: flex; flex-direction: column; gap: 6px; }
+#dc-root .st-voet-blok-7 { color: #FFFFFF; font-weight: 700; margin-bottom: 4px; }
+#dc-root .st-voet-blok-8 { max-width: 1200px; margin: 0 auto; padding: 20px 24px 32px; border-top: 1px solid #1F4BA0; font-size: 14px; }
+#dc-root .st-voet-blok-9 { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 8px 24px; }
+#dc-root .st-voet-link-2 { color: #D6E0F5; font-weight: 700; }

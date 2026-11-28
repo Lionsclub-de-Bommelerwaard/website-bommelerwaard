@@ -1,0 +1,59 @@
+/*
+ * Pagina /agenda/ (agenda): alleen op deze pagina.
+ * De classes met st- vervangen de vroegere style-attributen. Ze staan onder #dc-root, zodat ze net als
+ * inline styling voorgaan op de algemene regels in interactie.css (die met !important blijven winnen).
+ */
+
+/* Pagina-specifieke regels (hover, schermbreedte, beweging). */
+.lb-topic{transition:background-color .18s ease,border-color .18s ease,color .18s ease}
+.lb-news{transition:transform .18s ease,box-shadow .18s ease,border-color .18s ease}
+.lb-news:hover .lb-news-more{text-decoration:underline}
+@media (prefers-reduced-motion:reduce){.lb-news:hover{transform:none}}
+@media (prefers-reduced-motion:reduce){.lb-ev:hover{transform:none}}
+
+/* Opmaak van de elementen op deze pagina. */
+#dc-root .st-agenda-blok-1 { max-width: 1200px; margin: 0 auto; padding: 28px 24px 40px; display: flex; flex-wrap: wrap; gap: 32px; align-items: flex-end; justify-content: space-between; }
+#dc-root .st-agenda-blok-2 { flex: 1 1 520px; min-width: 0; }
+#dc-root .st-agenda-alinea-1 { margin: 0; font-size: 20px; max-width: 620px; }
+#dc-root .st-agenda-ev-1 { flex: 0 1 340px; min-width: 0; display: flex; flex-direction: column; gap: 6px; padding: 22px 24px; border-radius: 20px; background: #00338D; color: #FFFFFF; text-decoration: none; border: 2px solid #00338D; }
+#dc-root .st-agenda-tekst-1 { font-size: 13px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; color: #EBB700; }
+#dc-root .st-agenda-tekst-2 { font-family: 'Helvetica Neue Condensed', 'Roboto Condensed', 'Arial Narrow', sans-serif; font-weight: 800; font-size: 28px; line-height: 1.1; }
+#dc-root .st-agenda-tekst-3 { margin-top: 6px; align-self: flex-start; padding: 6px 12px; border-radius: 999px; background: #EBB700; color: #00338D; font-weight: 800; }
+#dc-root .st-agenda-kop-1 { margin: 0 0 24px; font-size: 38px; }
+#dc-root .st-agenda-blok-3 { display: flex; flex-direction: column; gap: 32px; }
+#dc-root .st-agenda-blok-4 { display: flex; flex-direction: column; gap: 14px; }
+#dc-root .st-agenda-subkop-1 { margin: 0; font-size: 22px; color: #00338D; display: flex; align-items: center; gap: 12px; }
+#dc-root .st-agenda-tekst-4 { flex: 1; height: 2px; background: #D6DDEA; }
+#dc-root .st-agenda-ev-2 { display: flex; flex-wrap: wrap; background: #FFFFFF; border: 2px solid #D6DDEA; border-radius: 22px; overflow: hidden; }
+#dc-root .st-agenda-ev-date-1 { flex: none; width: 120px; min-height: 100%; background: #00338D; color: #FFFFFF; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 2px; padding: 20px 12px; text-align: center; }
+#dc-root .st-agenda-tekst-5 { font-family: 'Helvetica Neue Condensed', 'Roboto Condensed', 'Arial Narrow', sans-serif; font-weight: 800; font-size: 40px; line-height: 1; }
+#dc-root .st-agenda-tekst-6 { font-family: 'Helvetica Neue Condensed', 'Roboto Condensed', 'Arial Narrow', sans-serif; font-weight: 700; font-size: 18px; letter-spacing: 0.08em; }
+#dc-root .st-agenda-beeld-1 { flex: 1 1 260px; min-width: 0; width: 100%; height: 240px; object-fit: cover; object-position: 60% 50%; display: block; }
+#dc-root .st-agenda-blok-5 { flex: 1.6 1 360px; min-width: 0; padding: 24px 28px; display: flex; flex-direction: column; gap: 10px; }
+#dc-root .st-agenda-tekst-7 { font-size: 13px; font-weight: 700; padding: 4px 12px; border-radius: 999px; background: #E5EDFF; color: #00338D; }
+#dc-root .st-agenda-tekst-8 { font-size: 15px; font-weight: 700; color: #13203F; }
+#dc-root .st-agenda-subkop-2 { margin: 0; font-size: 28px; line-height: 1.15; }
+#dc-root .st-agenda-tekst-9 { display: flex; align-items: center; gap: 6px; font-size: 15px; color: #3D3E42; }
+#dc-root .st-agenda-blok-6 { display: flex; flex-wrap: wrap; gap: 12px; align-items: center; margin-top: 4px; }
+#dc-root .st-agenda-btn-1 { padding: 10px 18px; border-radius: 999px; border: 2px solid #00338D; color: #00338D; text-decoration: none; font-weight: 700; font-size: 16px; }
+#dc-root .st-agenda-link-1 { display: inline-flex; align-items: center; gap: 6px; font-weight: 700; font-size: 15px; color: #00338D; }
+#dc-root .st-agenda-ev-date-2 { flex: none; width: 120px; min-height: 100%; background: #68B1E1; color: #FFFFFF; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 2px; padding: 20px 12px; text-align: center; }
+#dc-root .st-agenda-beeld-2 { flex: 1 1 260px; min-width: 0; width: 100%; height: 240px; object-fit: cover; object-position: 50% 40%; display: block; }
+#dc-root .st-agenda-ev-date-3 { flex: none; width: 120px; min-height: 100%; background: #76BC21; color: #FFFFFF; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 2px; padding: 20px 12px; text-align: center; }
+#dc-root .st-agenda-beeld-3 { flex: 1 1 260px; min-width: 0; width: 100%; height: 240px; object-fit: cover; object-position: 50% 45%; display: block; }
+#dc-root .st-agenda-blok-7 { display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 18px; }
+#dc-root .st-agenda-ev-3 { background: #FFFFFF; border: 2px solid #D6DDEA; border-radius: 20px; overflow: hidden; display: flex; flex-direction: column; }
+#dc-root .st-agenda-beeld-4 { height: 160px; width: 100%; object-fit: cover; object-position: 62% 60%; display: block; }
+#dc-root .st-agenda-blok-8 { padding: 18px 20px 22px; display: flex; flex-direction: column; gap: 8px; flex: 1; }
+#dc-root .st-agenda-link-2 { color: #13203F; text-decoration: none; }
+#dc-root .st-agenda-alinea-2 { margin: 0; color: #55565A; font-size: 15px; flex: 1; }
+#dc-root .st-agenda-link-3 { font-weight: 700; font-size: 15px; }
+#dc-root .st-agenda-beeld-5 { height: 160px; width: 100%; object-fit: cover; object-position: 50% 55%; display: block; }
+#dc-root .st-agenda-beeld-6 { height: 160px; width: 100%; object-fit: cover; object-position: 50% 65%; display: block; }
+#dc-root .st-agenda-beeld-7 { height: 160px; width: 100%; object-fit: cover; object-position: 50% 35%; display: block; }
+#dc-root .st-agenda-sectie-1 { max-width: 1200px; margin: 0 auto; padding: 48px 24px 72px; }
+#dc-root .st-agenda-blok-9 { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 18px; }
+#dc-root .st-agenda-ev-4 { display: flex; gap: 18px; align-items: center; background: #FFFFFF; border: 2px solid #D6DDEA; border-radius: 18px; padding: 18px 20px; text-decoration: none; color: #13203F; }
+#dc-root .st-agenda-tekst-10 { flex: none; width: 64px; text-align: center; font-family: 'Helvetica Neue Condensed', 'Roboto Condensed', 'Arial Narrow', sans-serif; font-weight: 800; color: #55565A; line-height: 1.1; font-size: 26px; }
+#dc-root .st-agenda-tekst-11 { font-size: 14px; }
+#dc-root .st-agenda-tekst-12 { flex: none; width: 64px; text-align: center; font-family: 'Helvetica Neue Condensed', 'Roboto Condensed', 'Arial Narrow', sans-serif; font-weight: 800; color: #55565A; line-height: 1.1; font-size: 22px; }

@@ -1,0 +1,25 @@
+/*
+ * Pagina /contact/ (contact): alleen op deze pagina.
+ * De classes met st- vervangen de vroegere style-attributen. Ze staan onder #dc-root, zodat ze net als
+ * inline styling voorgaan op de algemene regels in interactie.css (die met !important blijven winnen).
+ */
+
+/* Pagina-specifieke regels (hover, schermbreedte, beweging). */
+.lb-topic{transition:background-color .18s ease,border-color .18s ease,color .18s ease}
+
+/* Opmaak van de elementen op deze pagina. */
+#dc-root .st-contact-alinea-1 { margin: 0; font-size: 20px; max-width: 640px; }
+#dc-root .st-contact-sectie-1 { max-width: 1200px; margin: 0 auto; padding: 48px 24px 72px; display: flex; flex-wrap: wrap; gap: 32px; align-items: flex-start; }
+#dc-root .st-contact-formulier-1 { display: flex; flex-direction: column; gap: 24px; }
+#dc-root .st-contact-blok-1 { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 10px; }
+#dc-root .st-contact-label-1 { display: flex; flex-direction: column; gap: 6px; font-weight: 600; font-size: 16px; }
+#dc-root .st-contact-groep-1 { grid-column: 1 / -1; margin: 0; border: 0; padding: 18px; border-radius: 14px; background: #F4F6FA; display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 14px; }
+#dc-root .st-contact-groepkop-1 { float: left; width: 100%; padding: 0 0 4px; font-weight: 700; color: #00338D; }
+#dc-root .st-contact-label-2 { display: flex; flex-direction: column; gap: 6px; font-weight: 600; font-size: 16px; grid-column: 1 / -1; }
+#dc-root .st-contact-blok-2 { font-size: 14px; color: #D6E0F5; }
+#dc-root .st-contact-link-1 { color: #EBB700; font-weight: 700; font-size: 14px; white-space: nowrap; }
+#dc-root .st-contact-blok-3 { background: #FDF1C7; border: 1px solid #F3D97A; border-radius: 22px; padding: 22px 26px; }
+#dc-root .st-contact-nadruk-1 { color: #13203F; white-space: nowrap; }
+#dc-root .st-contact-blok-4 { font-weight: 700; font-size: 18px; margin-bottom: 10px; }
+#dc-root .st-contact-blok-5 { display: flex; flex-wrap: wrap; gap: 8px; font-weight: 700; }
+#dc-root .st-contact-btn-1 { padding: 8px 14px; border-radius: 999px; border: 2px solid #00338D; color: #00338D; text-decoration: none; font-size: 15px; }

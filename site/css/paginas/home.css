@@ -1,0 +1,74 @@
+/*
+ * Pagina / (home): alleen op deze pagina.
+ * De classes met st- vervangen de vroegere style-attributen. Ze staan onder #dc-root, zodat ze net als
+ * inline styling voorgaan op de algemene regels in interactie.css (die met !important blijven winnen).
+ */
+
+/* Pagina-specifieke regels (hover, schermbreedte, beweging). */
+.lb-marquee:focus-within .lb-marquee-track{animation-play-state:paused}
+@media (prefers-reduced-motion:reduce){.lb-marquee-track{animation:none;flex-wrap:wrap;width:auto;justify-content:center}.lb-marquee-kopie{display:none !important}}
+.lb-home-news{overflow:hidden;margin:-8px -8px;padding:8px}
+.lb-home-news-track{display:flex;gap:20px}
+.lb-home-news-track>.lb-news{flex:0 0 calc((100% - 40px)/3);min-width:0}
+@media (max-width:960px){.lb-home-news-track>.lb-news{flex-basis:calc((100% - 20px)/2)}}
+@media (max-width:640px){.lb-home-news-track>.lb-news{flex-basis:100%}}
+.lb-news{transition:transform .2s ease,box-shadow .2s ease,border-color .2s ease}
+.lb-news:hover{transform:translateY(-4px);box-shadow:0 16px 32px rgba(0,51,141,.16);border-color:#00338D !important}
+.lb-news-img{transition:transform .4s ease}
+.lb-news:hover .lb-news-img{transform:scale(1.05)}
+.lb-news:hover .lb-news-title{color:#00338D}
+.lb-news:focus-visible{outline:3px solid #EBB700;outline-offset:3px}
+@media (prefers-reduced-motion:reduce){.lb-news:hover,.lb-news:hover .lb-news-img{transform:none}}
+
+/* Opmaak van de elementen op deze pagina. */
+#dc-root .st-home-blok-1 { max-width: 1200px; margin: 0 auto; padding: 72px 24px 56px; display: flex; flex-wrap: wrap; gap: 48px; align-items: center; }
+#dc-root .st-home-blok-2 { flex: 1 1 460px; min-width: 0; display: flex; flex-direction: column; gap: 20px; }
+#dc-root .st-home-titel-1 { margin: 0; font-size: 56px; line-height: 1.05; font-weight: 800; letter-spacing: -0.01em; }
+#dc-root .st-home-alinea-1 { margin: 0; font-size: 20px; color: #D6E0F5; max-width: 560px; }
+#dc-root .st-home-beeld-1 { flex: 1 1 420px; min-width: 0; height: 420px; width: 100%; object-fit: cover; object-position: 50% 40%; border-radius: 20px; display: block; }
+#dc-root .st-home-blok-3 { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1px; background: #1F4BA0; border-radius: 16px; overflow: hidden; }
+#dc-root .st-home-blok-4 { background: #002A75; padding: 24px; }
+#dc-root .st-home-sectie-1 { max-width: 1200px; margin: 0 auto; padding: 72px 24px 24px; }
+#dc-root .st-home-blok-5 { display: flex; flex-wrap: wrap; gap: 24px; }
+#dc-root .st-home-act-1 { flex: 2 1 520px; min-width: 0; display: flex; flex-wrap: wrap; background: #FDF1C7; border-radius: 20px; overflow: hidden; text-decoration: none; color: #13203F; border: 1px solid #F3D97A; }
+#dc-root .st-home-beeld-2 { flex: 1 1 240px; min-width: 0; min-height: 260px; width: 100%; object-fit: cover; object-position: 60% 50%; display: block; }
+#dc-root .st-home-blok-6 { flex: 1 1 280px; padding: 32px; display: flex; flex-direction: column; gap: 12px; }
+#dc-root .st-home-blok-7 { display: flex; align-items: center; gap: 8px; font-weight: 700; }
+#dc-root .st-home-tekst-1 { margin-top: auto; align-self: flex-start; padding: 12px 20px; border-radius: 999px; background: #00338D; color: #FFFFFF; font-weight: 700; }
+#dc-root .st-home-blok-8 { flex: 1 1 320px; min-width: 0; background: #FFFFFF; border-radius: 20px; border: 1px solid #D6DDEA; padding: 28px; display: flex; flex-direction: column; gap: 4px; }
+#dc-root .st-home-kop-1 { margin: 0 0 8px; font-size: 24px; }
+#dc-root .st-home-agenda-1 { display: flex; gap: 16px; padding: 12px 10px; margin: 0 -10px; border-bottom: 1px solid #D6DDEA; border-radius: 10px; text-decoration: none; color: #13203F; }
+#dc-root .st-home-blok-9 { width: 64px; flex: none; font-family: 'Helvetica Neue Condensed', 'Roboto Condensed', 'Arial Narrow', sans-serif; font-weight: 800; color: #00338D; line-height: 1.1; }
+#dc-root .st-home-tekst-2 { font-size: 14px; font-weight: 700; }
+#dc-root .st-home-agenda-arrow-1 { margin-left: auto; align-self: center; flex: none; color: #00338D; font-weight: 700; }
+#dc-root .st-home-blok-10 { width: 64px; flex: none; font-family: 'Helvetica Neue Condensed', 'Roboto Condensed', 'Arial Narrow', sans-serif; font-weight: 800; color: #00338D; line-height: 1.1; font-size: 15px; }
+#dc-root .st-home-agenda-2 { display: flex; gap: 16px; padding: 12px 10px; margin: 0 -10px; border-radius: 10px; text-decoration: none; color: #13203F; }
+#dc-root .st-home-link-1 { margin-top: 8px; font-weight: 700; }
+#dc-root .st-home-blok-11 { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-end; gap: 24px; margin-bottom: 28px; }
+#dc-root .st-home-blok-12 { max-width: 640px; }
+#dc-root .st-home-kop-2 { margin: 0 0 8px; font-size: 44px; line-height: 1.1; }
+#dc-root .st-home-blok-13 { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 20px; }
+#dc-root .st-home-act-2 { display: flex; flex-direction: column; background: #FFFFFF; border: 1px solid #D6DDEA; border-radius: 18px; overflow: hidden; text-decoration: none; color: #13203F; }
+#dc-root .st-home-blok-14 { height: 170px; background: #E4E9F4; display: flex; align-items: center; justify-content: center; color: #55565A; font-size: 14px; padding: 12px; text-align: center; }
+#dc-root .st-home-blok-15 { padding: 20px 22px 24px; display: flex; flex-direction: column; gap: 8px; flex: 1; }
+#dc-root .st-home-blok-16 { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; }
+#dc-root .st-home-tekst-3 { display: flex; align-items: center; gap: 6px; font-size: 13px; font-weight: 600; color: #55565A; }
+#dc-root .st-home-subkop-1 { margin: 0; font-size: 22px; line-height: 1.2; }
+#dc-root .st-home-tekst-4 { margin-top: auto; padding-top: 8px; font-weight: 700; color: #00338D; font-size: 16px; }
+#dc-root .st-home-alinea-2 { margin: 0 0 32px; color: #55565A; max-width: 640px; }
+#dc-root .st-home-blok-17 { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; }
+#dc-root .st-home-blok-18 { background: #E8EDF5; border-radius: 18px; padding: 28px; display: flex; flex-direction: column; gap: 12px; }
+#dc-root .st-home-link-2 { margin-top: auto; font-weight: 700; }
+#dc-root .st-home-blok-19 { background: #00338D; color: #FFFFFF; border-radius: 18px; padding: 28px; display: flex; flex-direction: column; gap: 12px; }
+#dc-root .st-home-blok-20 { margin-top: 28px; background: #EBB700; border-radius: 18px; padding: 28px 32px; display: flex; flex-wrap: wrap; gap: 20px 32px; align-items: center; justify-content: space-between; }
+#dc-root .st-home-blok-21 { display: flex; align-items: center; gap: 16px; flex: 1 1 420px; min-width: 0; }
+#dc-root .st-home-tekst-5 { flex: none; width: 52px; height: 52px; border-radius: 50%; background: #FFFFFF; display: flex; align-items: center; justify-content: center; }
+#dc-root .st-home-blok-22 { color: #13203F; font-size: 16px; }
+#dc-root .st-home-nadruk-1 { color: #00338D; white-space: nowrap; }
+#dc-root .st-home-blok-23 { flex: 1 1 300px; min-width: 0; display: flex; flex-direction: column; align-items: flex-start; gap: 10px; padding-left: 28px; border-left: 2px solid rgba(0, 51, 141, 0.25); }
+#dc-root .st-home-banner-1 { display: block; max-width: 728px; margin: 28px auto 0; border-radius: 12px; overflow: hidden; box-shadow: 0 8px 22px rgba(0, 51, 141, 0.14); }
+#dc-root .st-home-beeld-3 { display: block; width: 100%; height: auto; }
+#dc-root .st-home-blok-24 { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-end; gap: 16px; margin-bottom: 28px; }
+#dc-root .st-home-kop-3 { margin: 0; font-size: 44px; line-height: 1.1; }
+#dc-root .st-home-blok-25 { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-end; gap: 16px; margin-bottom: 24px; }
+#dc-root .st-home-marquee-1 { overflow: hidden; padding: 8px 0; -webkit-mask-image: linear-gradient(to right, transparent 0, #000 6%, #000 94%, transparent 100%); mask-image: linear-gradient(to right, transparent 0, #000 6%, #000 94%, transparent 100%); }
