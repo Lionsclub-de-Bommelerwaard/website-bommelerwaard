@@ -1,6 +1,19 @@
 {
   "items": [
     {
+      "cat": "actie",
+      "title": "Lions klussen in de nieuwe werkplaats van Elliz in Company",
+      "text": "Afgelopen week hebben de Lions de handen uit de mouwen gestoken in de nieuwe, oude ruimte van Elliz in Company | Fiets + Techniek. Er werd geschilderd, wanden werden verplaatst, de elektra aangesloten en de ramen aangepakt. Zo is de werkplaats straks weer helemaal klaar om in te trekken. Daar worden dan weer oude fietsen opgeknapt, samen met mensen die om wat voor reden ook een afstand hebben tot de arbeidsmarkt.",
+      "date": "November 2026",
+      "img": "/assets/nieuws-klussen-fietswerkplaats.jpg",
+      "alt": "Lions zetten een tussenwand op zijn plek in de nieuwe fietswerkplaats van Elliz in Company",
+      "pos": "50% 45%",
+      "cta": "Meer over het fietsenproject",
+      "href": "/fietsenproject/",
+      "visibleFrom": "2026-11-28",
+      "visibleUntil": "2099-12-31"
+    },
+    {
       "cat": "evenement",
       "title": "Inschrijving Koekeloeretoere 2027 is geopend",
       "text": "Op zondag 18 april 2027 rijden we weer. Deelname kost € 85 per persoon; de opbrengst gaat naar de vaartocht voor ouderen op de Columbus.",
