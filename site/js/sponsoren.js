@@ -1,7 +1,7 @@
 // Sponsorlogo's op de homepage uit /data/sponsoren.json.
-// Per sponsor: naam, url (optioneel, maakt het logo klikbaar), omschrijving (optioneel, verschijnt in een tooltip bij hover),
-// logo (pad naar het plaatje), startdatum en einddatum (JJJJ-MM-DD).
-// Een sponsor is zichtbaar van de startdatum tot en met de einddatum.
+// Per sponsor: name, url (optioneel, maakt het logo klikbaar), description (optioneel, verschijnt in een tooltip bij hover),
+// logo (pad naar het plaatje), visibleFrom en visibleUntil (JJJJ-MM-DD).
+// Een sponsor is zichtbaar van visibleFrom tot en met visibleUntil.
 (function () {
   'use strict';
 
@@ -43,10 +43,10 @@
     }
     tip.innerHTML = '';
     var b = document.createElement('strong');
-    b.textContent = s.naam;
+    b.textContent = s.name;
     b.style.display = 'block';
     tip.appendChild(b);
-    tip.appendChild(document.createTextNode(s.omschrijving));
+    tip.appendChild(document.createTextNode(s.description));
     var r = el.getBoundingClientRect();
     var x = Math.min(Math.max(r.left + r.width / 2, 140), window.innerWidth - 140);
     tip.style.left = x + 'px';
@@ -69,7 +69,7 @@
     }
     var img = document.createElement('img');
     img.src = s.logo;
-    img.alt = kopie ? '' : (s.naam || '');
+    img.alt = kopie ? '' : (s.name || '');
     img.loading = 'lazy';
     img.decoding = 'async';
     img.setAttribute('style', 'max-width: ' + MAX_BREED + 'px; max-height: ' + MAX_HOOG + 'px; object-fit: contain; border-radius: 8px; display: block');
@@ -89,7 +89,7 @@
     } else {
       wrap.appendChild(img);
     }
-    if (s.omschrijving) {
+    if (s.description) {
       wrap.addEventListener('mouseenter', function () { toonTip(wrap, s); });
       wrap.addEventListener('mouseleave', verbergTip);
       if (doel !== img) {
@@ -100,7 +100,7 @@
           var box = wrap.closest('.lb-marquee');
           if (box) box.scrollLeft = 0;
         });
-        doel.setAttribute('aria-label', s.naam + ': ' + s.omschrijving + ' (opent in een nieuw tabblad)');
+        doel.setAttribute('aria-label', s.name + ': ' + s.description + ' (opent in een nieuw tabblad)');
       }
     }
     return wrap;
@@ -119,10 +119,10 @@
   function toon(sponsoren) {
     var nu = Date.now();
     var actief = sponsoren.filter(function (s) {
-      var start = datum(s.startdatum, false);
-      var eind = datum(s.einddatum, true);
+      var start = datum(s.visibleFrom, false);
+      var eind = datum(s.visibleUntil, true);
       if (!s.logo || start === null || eind === null) {
-        console.warn('Sponsor overgeslagen (logo of datum ontbreekt/ongeldig):', s.naam || s);
+        console.warn('Sponsor overgeslagen (logo of datum ontbreekt/ongeldig):', s.name || s);
         return false;
       }
       return start <= nu && nu <= eind;
@@ -151,8 +151,8 @@
       return response.json();
     })
     .then(function (data) {
-      if (!data || !Array.isArray(data.sponsoren)) throw new Error('sponsoren.json moet een sponsoren-array bevatten');
-      toon(data.sponsoren);
+      if (!data || !Array.isArray(data.sponsors)) throw new Error('sponsoren.json moet een sponsors-array bevatten');
+      toon(data.sponsors);
     })
     .catch(function (error) {
       console.error('Sponsoren konden niet uit /data/sponsoren.json worden geladen:', error);
