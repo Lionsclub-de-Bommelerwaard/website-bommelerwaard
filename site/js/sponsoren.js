@@ -1,7 +1,18 @@
-// Sponsorlogo's op de homepage uit /data/sponsoren.json.
-// Per sponsor: name, url (optioneel, maakt het logo klikbaar), description (optioneel, verschijnt in een tooltip bij hover),
-// logo (pad naar het plaatje), visibleFrom en visibleUntil (JJJJ-MM-DD).
-// Een sponsor is zichtbaar van visibleFrom tot en met visibleUntil.
+// Sponsorlogo's uit /data/sponsoren.json, per plek op de site.
+//
+// Per sponsor: name, url (optioneel, maakt het logo klikbaar, opent in een nieuw tabblad),
+// description (optioneel, verschijnt in een tooltip bij hover), logo (pad naar het plaatje),
+// tileBackground (optioneel, achtergrondkleur van de tegel, bijv. voor een wit logo)
+// en visibility: per plek een visibleFrom en visibleUntil.
+//
+// Plekken: "home" (doorlopende band op de homepage), "koekeloeretoere" en "kacheltjes"
+// (tegels op die pagina's). Een sponsor staat alleen op een plek als die plek in visibility staat.
+// Datum: JJJJ-MM-DD of JJJJ-MM-DDTUU:MM. visibleUntil zonder tijd telt tot en met het eind van die dag.
+//
+// Op de pagina: een element met data-sponsors="<plek>" en data-dc-keep="1".
+//   - class "lb-marquee": doorlopende band
+//   - anders: tegels, met optioneel data-title en data-intro als kop en tekst erboven.
+//     Zijn er geen zichtbare sponsoren, dan blijft het blok leeg.
 (function () {
   'use strict';
 
@@ -9,13 +20,18 @@
   var MAX_BREED = 160;
   var MAX_HOOG = 80;
 
-  function datum(value, eindVanDag) {
-    var m = typeof value === 'string' ? /^(\d{4})-(\d{2})-(\d{2})$/.exec(value) : null;
+  function tijdstip(value, eindVanDag) {
+    var m = typeof value === 'string'
+      ? /^(\d{4})-(\d{2})-(\d{2})(?:T([01]\d|2[0-3]):([0-5]\d))?$/.exec(value)
+      : null;
     if (!m) return null;
-    var d = eindVanDag
-      ? new Date(+m[1], +m[2] - 1, +m[3], 23, 59, 59, 999)
-      : new Date(+m[1], +m[2] - 1, +m[3]);
-    return d.getMonth() === +m[2] - 1 ? d.getTime() : null;
+    var heeftTijd = m[4] !== undefined;
+    var d = new Date(+m[1], +m[2] - 1, +m[3],
+      heeftTijd ? +m[4] : (eindVanDag ? 23 : 0),
+      heeftTijd ? +m[5] : (eindVanDag ? 59 : 0),
+      heeftTijd ? 0 : (eindVanDag ? 59 : 0),
+      heeftTijd ? 0 : (eindVanDag ? 999 : 0));
+    return d.getMonth() === +m[2] - 1 && d.getDate() === +m[3] ? d.getTime() : null;
   }
 
   function maatVoorLogo(img) {
@@ -31,7 +47,7 @@
   // Eén zwevende tooltip voor de omschrijving. Hij hangt aan <body>, zodat de band
   // (overflow: hidden) hem niet afknipt. De band staat stil zolang de muis erop staat.
   var tip = null;
-  var tipBij = null;   // [wrap, sponsor, link] waar de tooltip nu bij hoort
+  var tipBij = null;   // [element, sponsor, link] waar de tooltip nu bij hoort
   function toonTip(el, s, link) {
     tipBij = [el, s, link || null];
     if (!tip) {
@@ -60,21 +76,17 @@
     else verbergTip();
   }, { passive: true });
 
-  function logo(s, kopie) {
-    var wrap = document.createElement('div');
-    wrap.setAttribute('style', 'flex: none; height: 96px; padding: 0 26px; display: flex; align-items: center; justify-content: center');
-    if (kopie) {
-      wrap.className = 'lb-marquee-kopie';
-      wrap.setAttribute('aria-hidden', 'true');
-    }
+  // Logo (eventueel als link) met tooltip in het gegeven omhulsel.
+  function vulLogo(wrap, s, kopie, extraImgStijl) {
     var img = document.createElement('img');
     img.src = s.logo;
     img.alt = kopie ? '' : (s.name || '');
     img.loading = 'lazy';
     img.decoding = 'async';
-    img.setAttribute('style', 'max-width: ' + MAX_BREED + 'px; max-height: ' + MAX_HOOG + 'px; object-fit: contain; border-radius: 8px; display: block');
+    img.setAttribute('style', 'max-width: 100%; max-height: ' + MAX_HOOG + 'px; object-fit: contain; border-radius: 8px; display: block' + (extraImgStijl || ''));
     if (img.complete && img.naturalWidth) maatVoorLogo(img);
     else img.addEventListener('load', function () { maatVoorLogo(img); });
+
     var doel = img;
     if (s.url && /^https?:\/\//.test(s.url)) {
       var a = document.createElement('a');
@@ -103,37 +115,95 @@
         doel.setAttribute('aria-label', s.name + ': ' + s.description + ' (opent in een nieuw tabblad)');
       }
     }
-    return wrap;
   }
 
-  var track = null;
+  function band(lijst) {
+    var track = document.createElement('div');
+    track.className = 'lb-marquee-track';
+    track.setAttribute('style', 'display: flex; align-items: center; width: max-content');
+    // Twee keer dezelfde rij, zodat de doorlopende band naadloos rondgaat.
+    [false, true].forEach(function (kopie) {
+      lijst.forEach(function (s) {
+        var wrap = document.createElement('div');
+        wrap.setAttribute('style', 'flex: none; height: 96px; padding: 0 26px; display: flex; align-items: center; justify-content: center');
+        if (kopie) {
+          wrap.className = 'lb-marquee-kopie';
+          wrap.setAttribute('aria-hidden', 'true');
+        }
+        vulLogo(wrap, s, kopie, '; max-width: ' + MAX_BREED + 'px');
+        track.appendChild(wrap);
+      });
+    });
+    return track;
+  }
 
-  // De paginaopbouw (dc-runtime) kan het blok vervangen; hang de rij dan opnieuw in.
+  function tegels(lijst, box) {
+    var holder = document.createElement('div');
+    if (!lijst.length) return holder;
+    var titel = box.getAttribute('data-title');
+    var intro = box.getAttribute('data-intro');
+    if (titel) {
+      var h = document.createElement('h3');
+      h.textContent = titel;
+      h.setAttribute('style', 'margin: 0 0 6px; font-size: 26px');
+      holder.appendChild(h);
+    }
+    if (intro) {
+      var p = document.createElement('p');
+      p.textContent = intro;
+      p.setAttribute('style', 'margin: 0 0 18px; color: #55565A; max-width: 640px');
+      holder.appendChild(p);
+    }
+    var grid = document.createElement('div');
+    grid.setAttribute('style', 'display: grid; grid-template-columns: repeat(auto-fill, minmax(170px, 1fr)); gap: 12px');
+    lijst.forEach(function (s) {
+      var tile = document.createElement('div');
+      tile.className = 'lb-logo-tile';
+      var bg = s.tileBackground || '#FFFFFF';
+      tile.setAttribute('style', 'height: 100px; background: ' + bg + '; ' + (s.tileBackground ? '' : 'border: 1px solid #D6DDEA; ') + 'border-radius: 14px; display: flex; align-items: center; justify-content: center; padding: 10px 18px; box-sizing: border-box');
+      vulLogo(tile, s, false);
+      grid.appendChild(tile);
+    });
+    holder.appendChild(grid);
+    return holder;
+  }
+
+  var gebouwd = {};   // plek -> opgebouwde inhoud
+
+  // De paginaopbouw (dc-runtime) kan de blokken vervangen; hang de inhoud dan opnieuw in.
   function koppel() {
-    var box = document.querySelector('.lb-marquee');
-    if (!box || !track || track.parentNode === box) return;
-    box.innerHTML = '';
-    box.appendChild(track);
+    Object.keys(gebouwd).forEach(function (plek) {
+      var box = document.querySelector('[data-sponsors="' + plek + '"]');
+      var inhoud = gebouwd[plek];
+      if (!box || inhoud.parentNode === box) return;
+      box.innerHTML = '';
+      box.appendChild(inhoud);
+    });
   }
 
-  function toon(sponsoren) {
-    var nu = Date.now();
-    var actief = sponsoren.filter(function (s) {
-      var start = datum(s.visibleFrom, false);
-      var eind = datum(s.visibleUntil, true);
+  function zichtbaarOp(sponsoren, plek, nu) {
+    return sponsoren.filter(function (s) {
+      var v = s.visibility && s.visibility[plek];
+      if (!v) return false;
+      var start = tijdstip(v.visibleFrom, false);
+      var eind = tijdstip(v.visibleUntil, true);
       if (!s.logo || start === null || eind === null) {
-        console.warn('Sponsor overgeslagen (logo of datum ontbreekt/ongeldig):', s.name || s);
+        console.warn('Sponsor overgeslagen op "' + plek + '" (logo of datum ontbreekt/ongeldig):', s.name || s);
         return false;
       }
       return start <= nu && nu <= eind;
     });
+  }
 
-    track = document.createElement('div');
-    track.className = 'lb-marquee-track';
-    track.setAttribute('style', 'display: flex; align-items: center; width: max-content');
-    // Twee keer dezelfde rij, zodat de doorlopende band naadloos rondgaat.
-    actief.forEach(function (s) { track.appendChild(logo(s, false)); });
-    actief.forEach(function (s) { track.appendChild(logo(s, true)); });
+  function toon(sponsoren) {
+    var nu = Date.now();
+    var boxen = document.querySelectorAll('[data-sponsors]');
+    for (var i = 0; i < boxen.length; i++) {
+      var box = boxen[i];
+      var plek = box.getAttribute('data-sponsors');
+      var lijst = zichtbaarOp(sponsoren, plek, nu);
+      gebouwd[plek] = box.classList.contains('lb-marquee') ? band(lijst) : tegels(lijst, box);
+    }
     koppel();
   }
 
