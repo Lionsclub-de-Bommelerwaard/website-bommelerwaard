@@ -7,7 +7,9 @@
 //
 // Plekken: "home" (doorlopende band op de homepage), "koekeloeretoere" en "kacheltjes"
 // (tegels op die pagina's). Een sponsor staat alleen op een plek als die plek in visibility staat.
-// Datum: JJJJ-MM-DD of JJJJ-MM-DDTUU:MM. visibleUntil zonder tijd telt tot en met het eind van die dag.
+// Datum: JJJJ-MM-DD of JJJJ-MM-DDTUU:MM. Zonder tijd telt visibleFrom vanaf 0:00 en visibleUntil tot en met
+// 23:59 van die dag. Een tijd bij visibleUntil telt tot en met die minuut. Een sponsor met een ongeldige datum
+// wordt overgeslagen; de rest blijft zichtbaar.
 //
 // Op de pagina: een element met data-sponsors="<plek>" en data-dc-keep="1".
 //   - class "lb-marquee": doorlopende band
@@ -29,8 +31,8 @@
     var d = new Date(+m[1], +m[2] - 1, +m[3],
       heeftTijd ? +m[4] : (eindVanDag ? 23 : 0),
       heeftTijd ? +m[5] : (eindVanDag ? 59 : 0),
-      heeftTijd ? 0 : (eindVanDag ? 59 : 0),
-      heeftTijd ? 0 : (eindVanDag ? 999 : 0));
+      eindVanDag ? 59 : 0,
+      eindVanDag ? 999 : 0);
     return d.getMonth() === +m[2] - 1 && d.getDate() === +m[3] ? d.getTime() : null;
   }
 

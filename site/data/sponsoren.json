@@ -1,5 +1,5 @@
 {
-  "_uitleg": "Sponsorlogo's op de site. Per sponsor: name, url (optioneel: het logo wordt een link, die opent in een nieuw tabblad), description (optioneel: tekst onder de naam in de tooltip als je met de muis op het logo staat; zonder description toont de tooltip alleen de naam), logo (pad naar het plaatje in site/assets/), tileBackground (optioneel: achtergrondkleur van de tegel, bijv. voor een wit logo) en visibility. In visibility staat per plek wanneer de sponsor daar te zien is: \"home\" (band op de homepage), \"koekeloeretoere\" en \"kacheltjes\" (tegels op die pagina's). Per plek: visibleFrom en visibleUntil, als JJJJ-MM-DD of JJJJ-MM-DDTUU:MM (bijv. 2027-04-18T18:00). Een datum zonder tijd bij visibleUntil telt tot en met het eind van die dag. Staat een plek er niet bij, dan staat de sponsor daar niet. Toevoegen: zet het logo in site/assets/ en voeg een sponsor toe. De volgorde hier is de volgorde op de site.",
+  "_uitleg": "Sponsorlogo's op de site. Per sponsor: name, url (optioneel: het logo wordt een link, die opent in een nieuw tabblad), description (optioneel: tekst onder de naam in de tooltip als je met de muis op het logo staat; zonder description toont de tooltip alleen de naam), logo (pad naar het plaatje in site/assets/), tileBackground (optioneel: achtergrondkleur van de tegel, bijv. voor een wit logo) en visibility. In visibility staat per plek wanneer de sponsor daar te zien is: \"home\" (band op de homepage), \"koekeloeretoere\" en \"kacheltjes\" (tegels op die pagina's). Per plek: visibleFrom en visibleUntil, als JJJJ-MM-DD of JJJJ-MM-DDTUU:MM (bijv. 2027-04-18T18:00). Zonder tijd telt visibleFrom vanaf 0:00 en visibleUntil tot en met 23:59 van die dag. Een sponsor met een ongeldige datum wordt overgeslagen, de rest blijft zichtbaar. Staat een plek er niet bij, dan staat de sponsor daar niet. Toevoegen: zet het logo in site/assets/ en voeg een sponsor toe. De volgorde hier is de volgorde op de site.",
   "sponsors": [
     {
       "name": "3TAC",
@@ -8,12 +8,12 @@
       "logo": "/assets/sponsor-3tac.png",
       "visibility": {
         "home": {
-          "visibleFrom": "2026-01-01",
-          "visibleUntil": "2099-12-31"
+          "visibleFrom": "2026-01-01T00:00",
+          "visibleUntil": "2099-12-31T23:59"
         },
         "koekeloeretoere": {
-          "visibleFrom": "2026-01-01",
-          "visibleUntil": "2099-12-31"
+          "visibleFrom": "2026-01-01T00:00",
+          "visibleUntil": "2099-12-31T23:59"
         }
       }
     },
@@ -24,8 +24,8 @@
       "logo": "/assets/sponsor-aggregaat-store.png",
       "visibility": {
         "home": {
-          "visibleFrom": "2026-01-01",
-          "visibleUntil": "2099-12-31"
+          "visibleFrom": "2026-01-01T00:00",
+          "visibleUntil": "2099-12-31T23:59"
         }
       }
     },
@@ -37,16 +37,16 @@
       "tileBackground": "#1D498A",
       "visibility": {
         "home": {
-          "visibleFrom": "2026-01-01",
-          "visibleUntil": "2099-12-31"
+          "visibleFrom": "2026-01-01T00:00",
+          "visibleUntil": "2099-12-31T23:59"
         },
         "koekeloeretoere": {
-          "visibleFrom": "2026-01-01",
-          "visibleUntil": "2099-12-31"
+          "visibleFrom": "2026-01-01T00:00",
+          "visibleUntil": "2099-12-31T23:59"
         },
         "kacheltjes": {
-          "visibleFrom": "2026-01-01",
-          "visibleUntil": "2099-12-31"
+          "visibleFrom": "2026-01-01T00:00",
+          "visibleUntil": "2099-12-31T23:59"
         }
       }
     },
@@ -57,16 +57,16 @@
       "logo": "/assets/sponsor-bakker-van-keulen.png",
       "visibility": {
         "home": {
-          "visibleFrom": "2026-01-01",
-          "visibleUntil": "2099-12-31"
+          "visibleFrom": "2026-01-01T00:00",
+          "visibleUntil": "2099-12-31T23:59"
         },
         "koekeloeretoere": {
-          "visibleFrom": "2026-01-01",
-          "visibleUntil": "2099-12-31"
+          "visibleFrom": "2026-01-01T00:00",
+          "visibleUntil": "2099-12-31T23:59"
         },
         "kacheltjes": {
-          "visibleFrom": "2026-01-01",
-          "visibleUntil": "2099-12-31"
+          "visibleFrom": "2026-01-01T00:00",
+          "visibleUntil": "2099-12-31T23:59"
         }
       }
     },
@@ -77,12 +77,12 @@
       "logo": "/assets/sponsor-bm-bodem-management.png",
       "visibility": {
         "home": {
-          "visibleFrom": "2026-01-01",
-          "visibleUntil": "2099-12-31"
+          "visibleFrom": "2026-01-01T00:00",
+          "visibleUntil": "2099-12-31T23:59"
         },
         "koekeloeretoere": {
-          "visibleFrom": "2026-01-01",
-          "visibleUntil": "2099-12-31"
+          "visibleFrom": "2026-01-01T00:00",
+          "visibleUntil": "2099-12-31T23:59"
         }
       }
     },
@@ -93,8 +93,8 @@
       "logo": "/assets/sponsor-bonte-installaties.png",
       "visibility": {
         "home": {
-          "visibleFrom": "2026-01-01",
-          "visibleUntil": "2099-12-31"
+          "visibleFrom": "2026-01-01T00:00",
+          "visibleUntil": "2099-12-31T23:59"
         }
       }
     },
@@ -105,16 +105,16 @@
       "logo": "/assets/sponsor-de-regiekamer.png",
       "visibility": {
         "home": {
-          "visibleFrom": "2026-01-01",
-          "visibleUntil": "2099-12-31"
+          "visibleFrom": "2026-01-01T00:00",
+          "visibleUntil": "2099-12-31T23:59"
         },
         "koekeloeretoere": {
-          "visibleFrom": "2026-01-01",
-          "visibleUntil": "2099-12-31"
+          "visibleFrom": "2026-01-01T00:00",
+          "visibleUntil": "2099-12-31T23:59"
         },
         "kacheltjes": {
-          "visibleFrom": "2026-01-01",
-          "visibleUntil": "2099-12-31"
+          "visibleFrom": "2026-01-01T00:00",
+          "visibleUntil": "2099-12-31T23:59"
         }
       }
     },
@@ -125,8 +125,8 @@
       "logo": "/assets/sponsor-nodorum-solutio.png",
       "visibility": {
         "home": {
-          "visibleFrom": "2026-11-28",
-          "visibleUntil": "2099-12-31"
+          "visibleFrom": "2026-11-28T00:00",
+          "visibleUntil": "2099-12-31T23:59"
         }
       }
     },
@@ -137,8 +137,8 @@
       "logo": "/assets/sponsor-de-verdraagzaamheid.png",
       "visibility": {
         "home": {
-          "visibleFrom": "2026-01-01",
-          "visibleUntil": "2099-12-31"
+          "visibleFrom": "2026-01-01T00:00",
+          "visibleUntil": "2099-12-31T23:59"
         }
       }
     },
@@ -149,8 +149,8 @@
       "logo": "/assets/sponsor-den-eelder.png",
       "visibility": {
         "home": {
-          "visibleFrom": "2026-01-01",
-          "visibleUntil": "2099-12-31"
+          "visibleFrom": "2026-01-01T00:00",
+          "visibleUntil": "2099-12-31T23:59"
         }
       }
     },
@@ -161,8 +161,8 @@
       "logo": "/assets/sponsor-dirk-doet-marketing.png",
       "visibility": {
         "home": {
-          "visibleFrom": "2026-01-01",
-          "visibleUntil": "2099-12-31"
+          "visibleFrom": "2026-01-01T00:00",
+          "visibleUntil": "2099-12-31T23:59"
         }
       }
     },
@@ -173,8 +173,8 @@
       "logo": "/assets/sponsor-feest-en-thema-eventstyling.png",
       "visibility": {
         "home": {
-          "visibleFrom": "2026-01-01",
-          "visibleUntil": "2099-12-31"
+          "visibleFrom": "2026-01-01T00:00",
+          "visibleUntil": "2099-12-31T23:59"
         }
       }
     },
@@ -185,8 +185,8 @@
       "logo": "/assets/sponsor-fenix-cijfervangers.png",
       "visibility": {
         "home": {
-          "visibleFrom": "2026-01-01",
-          "visibleUntil": "2099-12-31"
+          "visibleFrom": "2026-01-01T00:00",
+          "visibleUntil": "2099-12-31T23:59"
         }
       }
     },
@@ -197,12 +197,12 @@
       "logo": "/assets/sponsor-huijbregts-notarissen-en-adviseurs.png",
       "visibility": {
         "home": {
-          "visibleFrom": "2026-01-01",
-          "visibleUntil": "2099-12-31"
+          "visibleFrom": "2026-01-01T00:00",
+          "visibleUntil": "2099-12-31T23:59"
         },
         "kacheltjes": {
-          "visibleFrom": "2026-01-01",
-          "visibleUntil": "2099-12-31"
+          "visibleFrom": "2026-01-01T00:00",
+          "visibleUntil": "2099-12-31T23:59"
         }
       }
     },
@@ -213,8 +213,8 @@
       "logo": "/assets/sponsor-kiyoh.png",
       "visibility": {
         "home": {
-          "visibleFrom": "2026-01-01",
-          "visibleUntil": "2099-12-31"
+          "visibleFrom": "2026-01-01T00:00",
+          "visibleUntil": "2099-12-31T23:59"
         }
       }
     },
@@ -225,8 +225,8 @@
       "logo": "/assets/sponsor-la-festa-catering.png",
       "visibility": {
         "home": {
-          "visibleFrom": "2026-01-01",
-          "visibleUntil": "2099-12-31"
+          "visibleFrom": "2026-01-01T00:00",
+          "visibleUntil": "2099-12-31T23:59"
         }
       }
     },
@@ -237,8 +237,8 @@
       "logo": "/assets/sponsor-mijn-kaaskoe-en-boer-leving.png",
       "visibility": {
         "home": {
-          "visibleFrom": "2026-01-01",
-          "visibleUntil": "2099-12-31"
+          "visibleFrom": "2026-01-01T00:00",
+          "visibleUntil": "2099-12-31T23:59"
         }
       }
     },
@@ -249,8 +249,8 @@
       "logo": "/assets/sponsor-mulders-top-sprouts.png",
       "visibility": {
         "home": {
-          "visibleFrom": "2026-01-01",
-          "visibleUntil": "2099-12-31"
+          "visibleFrom": "2026-01-01T00:00",
+          "visibleUntil": "2099-12-31T23:59"
         }
       }
     },
@@ -261,8 +261,8 @@
       "logo": "/assets/sponsor-fenix-family-office.png",
       "visibility": {
         "home": {
-          "visibleFrom": "2026-01-01",
-          "visibleUntil": "2099-12-31"
+          "visibleFrom": "2026-01-01T00:00",
+          "visibleUntil": "2099-12-31T23:59"
         }
       }
     },
@@ -273,8 +273,8 @@
       "logo": "/assets/sponsor-klantenvertellen.png",
       "visibility": {
         "home": {
-          "visibleFrom": "2026-01-01",
-          "visibleUntil": "2099-12-31"
+          "visibleFrom": "2026-01-01T00:00",
+          "visibleUntil": "2099-12-31T23:59"
         }
       }
     },
@@ -285,12 +285,12 @@
       "logo": "/assets/sponsor-parcel-metrics.png",
       "visibility": {
         "home": {
-          "visibleFrom": "2026-01-01",
-          "visibleUntil": "2099-12-31"
+          "visibleFrom": "2026-01-01T00:00",
+          "visibleUntil": "2099-12-31T23:59"
         },
         "kacheltjes": {
-          "visibleFrom": "2026-01-01",
-          "visibleUntil": "2099-12-31"
+          "visibleFrom": "2026-01-01T00:00",
+          "visibleUntil": "2099-12-31T23:59"
         }
       }
     },
@@ -301,8 +301,8 @@
       "logo": "/assets/sponsor-ravas.png",
       "visibility": {
         "home": {
-          "visibleFrom": "2026-01-01",
-          "visibleUntil": "2099-12-31"
+          "visibleFrom": "2026-01-01T00:00",
+          "visibleUntil": "2099-12-31T23:59"
         }
       }
     },
@@ -313,8 +313,8 @@
       "logo": "/assets/sponsor-slagerij-corianne-van-der-linden.png",
       "visibility": {
         "home": {
-          "visibleFrom": "2026-01-01",
-          "visibleUntil": "2099-12-31"
+          "visibleFrom": "2026-01-01T00:00",
+          "visibleUntil": "2099-12-31T23:59"
         }
       }
     },
@@ -325,8 +325,8 @@
       "logo": "/assets/sponsor-solipsis.png",
       "visibility": {
         "home": {
-          "visibleFrom": "2026-01-01",
-          "visibleUntil": "2099-12-31"
+          "visibleFrom": "2026-01-01T00:00",
+          "visibleUntil": "2099-12-31T23:59"
         }
       }
     },
@@ -337,12 +337,12 @@
       "logo": "/assets/sponsor-stadsapotheek-zaltbommel.png",
       "visibility": {
         "home": {
-          "visibleFrom": "2026-01-01",
-          "visibleUntil": "2099-12-31"
+          "visibleFrom": "2026-01-01T00:00",
+          "visibleUntil": "2099-12-31T23:59"
         },
         "kacheltjes": {
-          "visibleFrom": "2026-01-01",
-          "visibleUntil": "2099-12-31"
+          "visibleFrom": "2026-01-01T00:00",
+          "visibleUntil": "2099-12-31T23:59"
         }
       }
     },
@@ -354,8 +354,8 @@
       "tileBackground": "#6E001A",
       "visibility": {
         "home": {
-          "visibleFrom": "2026-01-01",
-          "visibleUntil": "2099-12-31"
+          "visibleFrom": "2026-01-01T00:00",
+          "visibleUntil": "2099-12-31T23:59"
         }
       }
     },
@@ -366,12 +366,12 @@
       "logo": "/assets/sponsor-ten-advocaten.png",
       "visibility": {
         "home": {
-          "visibleFrom": "2026-01-01",
-          "visibleUntil": "2099-12-31"
+          "visibleFrom": "2026-01-01T00:00",
+          "visibleUntil": "2099-12-31T23:59"
         },
         "kacheltjes": {
-          "visibleFrom": "2026-01-01",
-          "visibleUntil": "2099-12-31"
+          "visibleFrom": "2026-01-01T00:00",
+          "visibleUntil": "2099-12-31T23:59"
         }
       }
     },
@@ -382,8 +382,8 @@
       "logo": "/assets/sponsor-vakantiefestival.png",
       "visibility": {
         "home": {
-          "visibleFrom": "2026-01-01",
-          "visibleUntil": "2099-12-31"
+          "visibleFrom": "2026-01-01T00:00",
+          "visibleUntil": "2099-12-31T23:59"
         }
       }
     },
@@ -394,8 +394,8 @@
       "logo": "/assets/sponsor-van-delft-staal.png",
       "visibility": {
         "home": {
-          "visibleFrom": "2026-01-01",
-          "visibleUntil": "2099-12-31"
+          "visibleFrom": "2026-01-01T00:00",
+          "visibleUntil": "2099-12-31T23:59"
         }
       }
     },
@@ -406,16 +406,16 @@
       "logo": "/assets/sponsor-van-der-ven.png",
       "visibility": {
         "home": {
-          "visibleFrom": "2026-01-01",
-          "visibleUntil": "2099-12-31"
+          "visibleFrom": "2026-01-01T00:00",
+          "visibleUntil": "2099-12-31T23:59"
         },
         "koekeloeretoere": {
-          "visibleFrom": "2026-01-01",
-          "visibleUntil": "2099-12-31"
+          "visibleFrom": "2026-01-01T00:00",
+          "visibleUntil": "2099-12-31T23:59"
         },
         "kacheltjes": {
-          "visibleFrom": "2026-01-01",
-          "visibleUntil": "2099-12-31"
+          "visibleFrom": "2026-01-01T00:00",
+          "visibleUntil": "2099-12-31T23:59"
         }
       }
     },
@@ -426,8 +426,8 @@
       "logo": "/assets/sponsor-van-laarhoven-spuiterij.png",
       "visibility": {
         "home": {
-          "visibleFrom": "2026-01-01",
-          "visibleUntil": "2099-12-31"
+          "visibleFrom": "2026-01-01T00:00",
+          "visibleUntil": "2099-12-31T23:59"
         }
       }
     },
@@ -438,8 +438,8 @@
       "logo": "/assets/sponsor-wonen-en-welzijn.png",
       "visibility": {
         "home": {
-          "visibleFrom": "2026-01-01",
-          "visibleUntil": "2099-12-31"
+          "visibleFrom": "2026-01-01T00:00",
+          "visibleUntil": "2099-12-31T23:59"
         }
       }
     },
@@ -450,12 +450,12 @@
       "logo": "/assets/sponsor-bistro-in-petto.png",
       "visibility": {
         "koekeloeretoere": {
-          "visibleFrom": "2026-01-01",
-          "visibleUntil": "2099-12-31"
+          "visibleFrom": "2026-01-01T00:00",
+          "visibleUntil": "2099-12-31T23:59"
         },
         "kacheltjes": {
-          "visibleFrom": "2026-01-01",
-          "visibleUntil": "2099-12-31"
+          "visibleFrom": "2026-01-01T00:00",
+          "visibleUntil": "2099-12-31T23:59"
         }
       }
     },
@@ -466,12 +466,12 @@
       "logo": "/assets/sponsor-waerde-state.png",
       "visibility": {
         "koekeloeretoere": {
-          "visibleFrom": "2026-01-01",
-          "visibleUntil": "2099-12-31"
+          "visibleFrom": "2026-01-01T00:00",
+          "visibleUntil": "2099-12-31T23:59"
         },
         "kacheltjes": {
-          "visibleFrom": "2026-01-01",
-          "visibleUntil": "2099-12-31"
+          "visibleFrom": "2026-01-01T00:00",
+          "visibleUntil": "2099-12-31T23:59"
         }
       }
     },
@@ -482,8 +482,8 @@
       "logo": "/assets/sponsor-fimetec.png",
       "visibility": {
         "kacheltjes": {
-          "visibleFrom": "2026-01-01",
-          "visibleUntil": "2099-12-31"
+          "visibleFrom": "2026-01-01T00:00",
+          "visibleUntil": "2099-12-31T23:59"
         }
       }
     },
@@ -495,8 +495,8 @@
       "tileBackground": "#000000",
       "visibility": {
         "kacheltjes": {
-          "visibleFrom": "2026-01-01",
-          "visibleUntil": "2099-12-31"
+          "visibleFrom": "2026-01-01T00:00",
+          "visibleUntil": "2099-12-31T23:59"
         }
       }
     },
@@ -507,8 +507,8 @@
       "logo": "/assets/sponsor-in-den-verdwaalde-koogel.png",
       "visibility": {
         "kacheltjes": {
-          "visibleFrom": "2026-01-01",
-          "visibleUntil": "2099-12-31"
+          "visibleFrom": "2026-01-01T00:00",
+          "visibleUntil": "2099-12-31T23:59"
         }
       }
     },
@@ -519,8 +519,8 @@
       "logo": "/assets/sponsor-gp-equipment.png",
       "visibility": {
         "kacheltjes": {
-          "visibleFrom": "2026-01-01",
-          "visibleUntil": "2099-12-31"
+          "visibleFrom": "2026-01-01T00:00",
+          "visibleUntil": "2099-12-31T23:59"
         }
       }
     },
@@ -531,8 +531,8 @@
       "logo": "/assets/sponsor-coolcare-holland.png",
       "visibility": {
         "kacheltjes": {
-          "visibleFrom": "2026-01-01",
-          "visibleUntil": "2099-12-31"
+          "visibleFrom": "2026-01-01T00:00",
+          "visibleUntil": "2099-12-31T23:59"
         }
       }
     },
@@ -543,8 +543,8 @@
       "logo": "/assets/sponsor-meerman-machines.png",
       "visibility": {
         "kacheltjes": {
-          "visibleFrom": "2026-01-01",
-          "visibleUntil": "2099-12-31"
+          "visibleFrom": "2026-01-01T00:00",
+          "visibleUntil": "2099-12-31T23:59"
         }
       }
     },
@@ -555,8 +555,8 @@
       "logo": "/assets/sponsor-one-risk.png",
       "visibility": {
         "kacheltjes": {
-          "visibleFrom": "2026-01-01",
-          "visibleUntil": "2099-12-31"
+          "visibleFrom": "2026-01-01T00:00",
+          "visibleUntil": "2099-12-31T23:59"
         }
       }
     },
@@ -567,8 +567,8 @@
       "logo": "/assets/sponsor-van-boort.png",
       "visibility": {
         "kacheltjes": {
-          "visibleFrom": "2026-01-01",
-          "visibleUntil": "2099-12-31"
+          "visibleFrom": "2026-01-01T00:00",
+          "visibleUntil": "2099-12-31T23:59"
         }
       }
     },
@@ -579,8 +579,8 @@
       "logo": "/assets/sponsor-walking-football-team-nivo-sparta.png",
       "visibility": {
         "kacheltjes": {
-          "visibleFrom": "2026-01-01",
-          "visibleUntil": "2099-12-31"
+          "visibleFrom": "2026-01-01T00:00",
+          "visibleUntil": "2099-12-31T23:59"
         }
       }
     },
@@ -591,8 +591,8 @@
       "logo": "/assets/sponsor-paul-meijering.png",
       "visibility": {
         "kacheltjes": {
-          "visibleFrom": "2026-01-01",
-          "visibleUntil": "2099-12-31"
+          "visibleFrom": "2026-01-01T00:00",
+          "visibleUntil": "2099-12-31T23:59"
         }
       }
     },
@@ -603,8 +603,8 @@
       "logo": "/assets/sponsor-seqora.svg",
       "visibility": {
         "kacheltjes": {
-          "visibleFrom": "2026-01-01",
-          "visibleUntil": "2099-12-31"
+          "visibleFrom": "2026-01-01T00:00",
+          "visibleUntil": "2099-12-31T23:59"
         }
       }
     },
@@ -615,8 +615,8 @@
       "logo": "/assets/sponsor-bouwplanmakers.png",
       "visibility": {
         "kacheltjes": {
-          "visibleFrom": "2026-01-01",
-          "visibleUntil": "2099-12-31"
+          "visibleFrom": "2026-01-01T00:00",
+          "visibleUntil": "2099-12-31T23:59"
         }
       }
     },
@@ -627,8 +627,8 @@
       "logo": "/assets/sponsor-i3-organisatie-ontwikkeling.png",
       "visibility": {
         "kacheltjes": {
-          "visibleFrom": "2026-01-01",
-          "visibleUntil": "2099-12-31"
+          "visibleFrom": "2026-01-01T00:00",
+          "visibleUntil": "2099-12-31T23:59"
         }
       }
     },
@@ -640,8 +640,8 @@
       "tileBackground": "#000000",
       "visibility": {
         "kacheltjes": {
-          "visibleFrom": "2026-01-01",
-          "visibleUntil": "2099-12-31"
+          "visibleFrom": "2026-01-01T00:00",
+          "visibleUntil": "2099-12-31T23:59"
         }
       }
     },
@@ -653,8 +653,8 @@
       "tileBackground": "#0070B8",
       "visibility": {
         "kacheltjes": {
-          "visibleFrom": "2026-01-01",
-          "visibleUntil": "2099-12-31"
+          "visibleFrom": "2026-01-01T00:00",
+          "visibleUntil": "2099-12-31T23:59"
         }
       }
     },
@@ -665,8 +665,8 @@
       "logo": "/assets/sponsor-relly.png",
       "visibility": {
         "kacheltjes": {
-          "visibleFrom": "2026-01-01",
-          "visibleUntil": "2099-12-31"
+          "visibleFrom": "2026-01-01T00:00",
+          "visibleUntil": "2099-12-31T23:59"
         }
       }
     },
@@ -677,8 +677,8 @@
       "logo": "/assets/sponsor-amadeus.png",
       "visibility": {
         "kacheltjes": {
-          "visibleFrom": "2026-01-01",
-          "visibleUntil": "2099-12-31"
+          "visibleFrom": "2026-01-01T00:00",
+          "visibleUntil": "2099-12-31T23:59"
         }
       }
     },
@@ -689,8 +689,8 @@
       "logo": "/assets/sponsor-reco-groep.png",
       "visibility": {
         "kacheltjes": {
-          "visibleFrom": "2026-01-01",
-          "visibleUntil": "2099-12-31"
+          "visibleFrom": "2026-01-01T00:00",
+          "visibleUntil": "2099-12-31T23:59"
         }
       }
     },
@@ -702,8 +702,8 @@
       "tileBackground": "#549E46",
       "visibility": {
         "kacheltjes": {
-          "visibleFrom": "2026-01-01",
-          "visibleUntil": "2099-12-31"
+          "visibleFrom": "2026-01-01T00:00",
+          "visibleUntil": "2099-12-31T23:59"
         }
       }
     },
@@ -715,8 +715,8 @@
       "tileBackground": "#231F20",
       "visibility": {
         "kacheltjes": {
-          "visibleFrom": "2026-01-01",
-          "visibleUntil": "2099-12-31"
+          "visibleFrom": "2026-01-01T00:00",
+          "visibleUntil": "2099-12-31T23:59"
         }
       }
     },
@@ -727,8 +727,8 @@
       "logo": "/assets/sponsor-summa.png",
       "visibility": {
         "kacheltjes": {
-          "visibleFrom": "2026-01-01",
-          "visibleUntil": "2099-12-31"
+          "visibleFrom": "2026-01-01T00:00",
+          "visibleUntil": "2099-12-31T23:59"
         }
       }
     },
@@ -739,8 +739,8 @@
       "logo": "/assets/sponsor-studio-073.png",
       "visibility": {
         "kacheltjes": {
-          "visibleFrom": "2026-01-01",
-          "visibleUntil": "2099-12-31"
+          "visibleFrom": "2026-01-01T00:00",
+          "visibleUntil": "2099-12-31T23:59"
         }
       }
     }

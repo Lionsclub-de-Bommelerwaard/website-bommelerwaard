@@ -10,8 +10,8 @@
       "pos": "50% 42%",
       "cta": "Meer over het fietsenproject",
       "href": "/fietsenproject/",
-      "visibleFrom": "2026-11-28",
-      "visibleUntil": "2099-12-31"
+      "visibleFrom": "2026-11-28T00:00",
+      "visibleUntil": "2099-12-31T23:59"
     },
     {
       "cat": "evenement",
@@ -23,8 +23,8 @@
       "pos": "60% 50%",
       "cta": "Schrijf je in",
       "href": "/koekeloeretoere/#meedoen",
-      "visibleFrom": "2026-01-01",
-      "visibleUntil": "2099-12-31"
+      "visibleFrom": "2026-01-01T00:00",
+      "visibleUntil": "2099-12-31T23:59"
     },
     {
       "cat": "evenement",
@@ -36,8 +36,8 @@
       "pos": "50% 50%",
       "cta": "Bekijk de pakketten",
       "href": "/koekeloeretoere/sponsoring/",
-      "visibleFrom": "2026-01-01",
-      "visibleUntil": "2099-12-31"
+      "visibleFrom": "2026-01-01T00:00",
+      "visibleUntil": "2099-12-31T23:59"
     },
     {
       "cat": "actie",
@@ -49,8 +49,8 @@
       "pos": "50% 55%",
       "cta": "Meer over de statiegeldactie",
       "href": "/statiegeldactie/#doelen",
-      "visibleFrom": "2026-01-01",
-      "visibleUntil": "2099-12-31"
+      "visibleFrom": "2026-01-01T00:00",
+      "visibleUntil": "2099-12-31T23:59"
     },
     {
       "cat": "actie",
@@ -62,8 +62,8 @@
       "pos": "50% 50%",
       "cta": "Zo werkt het",
       "href": "/vreemd-en-oud-geld/",
-      "visibleFrom": "2026-01-01",
-      "visibleUntil": "2099-12-31"
+      "visibleFrom": "2026-01-01T00:00",
+      "visibleUntil": "2099-12-31T23:59"
     },
     {
       "cat": "evenement",
@@ -75,8 +75,8 @@
       "pos": "50% 30%",
       "cta": "Uitslag en foto’s",
       "href": "/slag-om-bommel/",
-      "visibleFrom": "2026-01-01",
-      "visibleUntil": "2099-12-31"
+      "visibleFrom": "2026-01-01T00:00",
+      "visibleUntil": "2099-12-31T23:59"
     },
     {
       "cat": "evenement",
@@ -88,8 +88,8 @@
       "pos": "50% 45%",
       "cta": "Meer over de Slag om Bommel",
       "href": "/slag-om-bommel/",
-      "visibleFrom": "2026-01-01",
-      "visibleUntil": "2099-12-31"
+      "visibleFrom": "2026-01-01T00:00",
+      "visibleUntil": "2099-12-31T23:59"
     },
     {
       "cat": "internationaal",
@@ -101,8 +101,8 @@
       "pos": "30% 50%",
       "cta": "Lees over de kacheltjesactie",
       "href": "/kacheltjes-oekraine/",
-      "visibleFrom": "2026-01-01",
-      "visibleUntil": "2099-12-31"
+      "visibleFrom": "2026-01-01T00:00",
+      "visibleUntil": "2099-12-31T23:59"
     },
     {
       "cat": "evenement",
@@ -114,8 +114,8 @@
       "pos": "50% 50%",
       "cta": "Over de Koekeloeretoere",
       "href": "/koekeloeretoere/",
-      "visibleFrom": "2026-01-01",
-      "visibleUntil": "2099-12-31"
+      "visibleFrom": "2026-01-01T00:00",
+      "visibleUntil": "2099-12-31T23:59"
     },
     {
       "cat": "evenement",
@@ -127,8 +127,8 @@
       "pos": "50% 40%",
       "cta": "Meer over de vaartocht",
       "href": "/varen-met-ouderen/",
-      "visibleFrom": "2026-01-01",
-      "visibleUntil": "2099-12-31"
+      "visibleFrom": "2026-01-01T00:00",
+      "visibleUntil": "2099-12-31T23:59"
     }
   ]
 }
