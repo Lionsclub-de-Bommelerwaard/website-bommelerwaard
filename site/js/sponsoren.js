@@ -1,5 +1,5 @@
 // Sponsorlogo's op de homepage uit /data/sponsoren.json.
-// Per sponsor: naam, url (optioneel, maakt het logo klikbaar), omschrijving (optioneel, tooltip),
+// Per sponsor: naam, url (optioneel, maakt het logo klikbaar), omschrijving (optioneel, verschijnt in een tooltip bij hover),
 // logo (pad naar het plaatje), startdatum en einddatum (JJJJ-MM-DD).
 // Een sponsor is zichtbaar van de startdatum tot en met de einddatum.
 (function () {
@@ -28,6 +28,32 @@
     img.style.height = Math.round(h) + 'px';
   }
 
+  // Eén zwevende tooltip voor de omschrijving. Hij hangt aan <body>, zodat de band
+  // (overflow: hidden) hem niet afknipt. De band staat stil zolang de muis erop staat.
+  var tip = null;
+  function toonTip(el, s) {
+    if (!tip) {
+      tip = document.createElement('div');
+      tip.className = 'lb-sponsor-tip';
+      tip.setAttribute('role', 'tooltip');
+      tip.setAttribute('style', 'font-family: \'Helvetica Neue\', Helvetica, Arial, sans-serif; position: fixed; z-index: 1000; max-width: 260px; padding: 10px 14px; border-radius: 12px; background: #00338D; color: #FFFFFF; font-size: 15px; line-height: 1.4; box-shadow: 0 10px 24px rgba(0, 31, 87, 0.28); pointer-events: none; transform: translate(-50%, -100%); transition: opacity .15s ease; opacity: 0');
+      document.body.appendChild(tip);
+    }
+    tip.innerHTML = '';
+    var b = document.createElement('strong');
+    b.textContent = s.naam;
+    b.style.display = 'block';
+    tip.appendChild(b);
+    tip.appendChild(document.createTextNode(s.omschrijving));
+    var r = el.getBoundingClientRect();
+    var x = Math.min(Math.max(r.left + r.width / 2, 140), window.innerWidth - 140);
+    tip.style.left = x + 'px';
+    tip.style.top = (r.top + 4) + 'px';
+    tip.style.opacity = '1';
+  }
+  function verbergTip() { if (tip) tip.style.opacity = '0'; }
+  window.addEventListener('scroll', verbergTip, { passive: true });
+
   function logo(s, kopie) {
     var wrap = document.createElement('div');
     wrap.setAttribute('style', 'flex: none; height: 96px; padding: 0 26px; display: flex; align-items: center; justify-content: center');
@@ -43,19 +69,28 @@
     img.setAttribute('style', 'max-width: ' + MAX_BREED + 'px; max-height: ' + MAX_HOOG + 'px; object-fit: contain; border-radius: 8px; display: block');
     if (img.complete && img.naturalWidth) maatVoorLogo(img);
     else img.addEventListener('load', function () { maatVoorLogo(img); });
-    var titel = s.omschrijving ? s.naam + ' – ' + s.omschrijving : '';
+    var doel = img;
     if (s.url && /^https?:\/\//.test(s.url)) {
       var a = document.createElement('a');
       a.href = s.url;
-      a.target = '_blank';
+      a.target = '_blank';           // opent in een nieuw tabblad
       a.rel = 'noopener';
-      if (titel) a.title = titel;
+      a.style.display = 'block';
       if (kopie) a.tabIndex = -1;
       a.appendChild(img);
       wrap.appendChild(a);
+      doel = a;
     } else {
-      if (titel) img.title = titel;
       wrap.appendChild(img);
+    }
+    if (s.omschrijving) {
+      wrap.addEventListener('mouseenter', function () { toonTip(wrap, s); });
+      wrap.addEventListener('mouseleave', verbergTip);
+      if (doel !== img) {
+        doel.addEventListener('focus', function () { toonTip(wrap, s); });
+        doel.addEventListener('blur', verbergTip);
+        doel.setAttribute('aria-label', s.naam + ': ' + s.omschrijving + ' (opent in een nieuw tabblad)');
+      }
     }
     return wrap;
   }
