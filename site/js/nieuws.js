@@ -37,6 +37,7 @@
       });
 
       window.ITEMS = activeItems;
+      document.dispatchEvent(new CustomEvent('nieuws:geladen', { detail: activeItems }));
       if (window.DC && DC.instance) DC.instance.setState({ newsItemsLoaded: true });
     })
     .catch(function (error) {

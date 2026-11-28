@@ -162,6 +162,7 @@
   }
 
   // ---------- DOM-morph (alleen in de browser) ----------
+  // Een element met data-dc-keep houdt zijn eigen inhoud: die wordt door een eigen script gevuld.
   var KEEP_ATTRS = { loading: 1, decoding: 1, fetchpriority: 1 };
   function morphChildren(oldP, newP) {
     var o = oldP.firstChild, nw = newP.firstChild;
@@ -170,7 +171,7 @@
       if (!o) { oldP.appendChild(nw); nw = nextNew; continue; }
       var nextOld = o.nextSibling;
       if (o.nodeType === nw.nodeType && (o.nodeType !== 1 || o.nodeName === nw.nodeName)) {
-        if (o.nodeType === 1) { morphAttrs(o, nw); morphChildren(o, nw); }
+        if (o.nodeType === 1) { morphAttrs(o, nw); if (!o.hasAttribute('data-dc-keep')) morphChildren(o, nw); }
         else if (o.nodeValue !== nw.nodeValue) o.nodeValue = nw.nodeValue;
       } else {
         oldP.replaceChild(nw, o);
