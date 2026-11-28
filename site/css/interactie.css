@@ -54,3 +54,8 @@ h1,h2,h3{font-family:'Helvetica Neue Condensed','Roboto Condensed','Arial Narrow
 .lb-pack:hover{transform:translateY(-2px);box-shadow:0 12px 28px rgba(0,51,141,.16)}
 .lb-pack[aria-pressed="false"]:hover{border-color:#00338D !important}
 .lb-pack:focus-visible,.lb-topic:focus-visible{outline:3px solid #EBB700;outline-offset:3px}
+
+/* Formulieren altijd licht, ook als de browser of omgeving een donker kleurenschema gebruikt */
+:root{color-scheme:light}
+input,textarea,select{color-scheme:light}
+textarea{background-color:#FFFFFF;color:#13203F}
