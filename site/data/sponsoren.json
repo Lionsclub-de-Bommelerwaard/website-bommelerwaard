@@ -58,6 +58,14 @@
       "visibleUntil": "2099-12-31"
     },
     {
+      "name": "Nodorum Solutio",
+      "url": "https://nodorumsolutio.com",
+      "description": "AI enables software development",
+      "logo": "/assets/sponsor-nodorum-solutio.png",
+      "visibleFrom": "2026-11-28",
+      "visibleUntil": "2099-12-31"
+    },
+    {
       "name": "De Verdraagzaamheid",
       "url": "https://www.verdraagzaamheidzaltbommel.nl",
       "description": "",
@@ -83,7 +91,7 @@
     },
     {
       "name": "Feest & Thema Eventstyling",
-      "url": "",
+      "url": "https://feestenthema-eventstyling.nl/",
       "description": "",
       "logo": "/assets/sponsor-feest-en-thema-eventstyling.png",
       "visibleFrom": "2026-01-01",
@@ -135,14 +143,6 @@
       "description": "",
       "logo": "/assets/sponsor-mulders-top-sprouts.png",
       "visibleFrom": "2026-01-01",
-      "visibleUntil": "2099-12-31"
-    },
-    {
-      "name": "Nodorum Solutio",
-      "url": "https://nodorumsolutio.com",
-      "description": "AI enables software development",
-      "logo": "/assets/sponsor-nodorum-solutio.png",
-      "visibleFrom": "2026-11-28",
       "visibleUntil": "2099-12-31"
     },
     {
