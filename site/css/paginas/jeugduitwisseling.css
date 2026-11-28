@@ -1,0 +1,26 @@
+/*
+ * Pagina /jeugduitwisseling/ (jeugduitwisseling): alleen op deze pagina.
+ * De classes met st- vervangen de vroegere style-attributen. Ze staan onder #dc-root, zodat ze net als
+ * inline styling voorgaan op de algemene regels in interactie.css (die met !important blijven winnen).
+ */
+
+/* Pagina-specifieke regels (hover, schermbreedte, beweging). */
+@media (max-width:900px){.lb-foto{flex-basis:calc((100% - 14px) / 2) !important}}
+@media (prefers-reduced-motion:reduce){.lb-foto:hover img{transform:none}.lb-foto-track{scroll-behavior:auto !important}}
+
+/* Opmaak van de elementen op deze pagina. */
+#dc-root .st-jeugduitwisseling-blok-1 { flex: 1 1 480px; min-width: 0; display: flex; flex-direction: column; gap: 18px; }
+#dc-root .st-jeugduitwisseling-beeld-1 { flex: 1 1 420px; min-width: 0; width: 100%; height: 420px; object-fit: cover; object-position: 50% 40%; border-radius: 20px; display: block; }
+#dc-root .st-jeugduitwisseling-sectie-1 { max-width: 1200px; margin: 0 auto; padding: 64px 24px 32px; display: flex; flex-wrap: wrap; gap: 48px; align-items: center; }
+#dc-root .st-jeugduitwisseling-lijst-1 { margin: 0; padding: 0; list-style: none; display: flex; flex-direction: column; gap: 12px; }
+#dc-root .st-jeugduitwisseling-item-1 { display: flex; gap: 12px; align-items: flex-start; }
+#dc-root .st-jeugduitwisseling-icoon-1 { flex: none; margin-top: 2px; }
+#dc-root .st-jeugduitwisseling-beeld-2 { flex: 1 1 400px; min-width: 0; width: 100%; height: 340px; object-fit: cover; border-radius: 20px; display: block; }
+#dc-root .st-jeugduitwisseling-blok-2 { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; }
+#dc-root .st-jeugduitwisseling-alinea-1 { margin: 20px 0 0; font-size: 16px; color: #55565A; }
+#dc-root .st-jeugduitwisseling-blok-3 { display: flex; flex-wrap: wrap; gap: 20px; }
+#dc-root .st-jeugduitwisseling-blok-4 { flex: 1 1 360px; min-width: 0; background: #FFFFFF; border: 1px solid #D6DDEA; border-radius: 18px; padding: 28px; }
+#dc-root .st-jeugduitwisseling-kop-1 { margin: 0 0 12px; font-size: 28px; }
+#dc-root .st-jeugduitwisseling-alinea-2 { margin: 0 0 10px; }
+#dc-root .st-jeugduitwisseling-blok-5 { flex: 1 1 360px; min-width: 0; background: #EBB700; border-radius: 18px; padding: 28px; display: flex; flex-direction: column; gap: 8px; }
+#dc-root .st-jeugduitwisseling-kop-2 { margin: 0; font-size: 28px; color: #00338D; }

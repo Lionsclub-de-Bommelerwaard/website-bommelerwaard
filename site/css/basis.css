@@ -1,0 +1,9 @@
+/*
+ * Basis: regels die op elke pagina gelden (typografie, logo, beweging beperken).
+ * De classes met st- vervangen de vroegere style-attributen. Ze staan onder #dc-root, zodat ze net als
+ * inline styling voorgaan op de algemene regels in interactie.css (die met !important blijven winnen).
+ */
+
+@media (prefers-reduced-motion:reduce){.lb-btn:hover,.lb-mtile:hover{transform:none}}
+@media (max-width:480px){.lb-logo{height:56px !important}}
+@media (max-width:600px){h1{font-size:clamp(32px,9vw,44px) !important;line-height:1.08 !important;overflow-wrap:break-word}}

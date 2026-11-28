@@ -1,0 +1,23 @@
+/*
+ * Pagina /privacy/ (privacy): alleen op deze pagina.
+ * De classes met st- vervangen de vroegere style-attributen. Ze staan onder #dc-root, zodat ze net als
+ * inline styling voorgaan op de algemene regels in interactie.css (die met !important blijven winnen).
+ */
+
+/* Pagina-specifieke regels (hover, schermbreedte, beweging). */
+@media (max-width:900px){nav[aria-label="Inhoud"]{position:static !important}}
+
+/* Opmaak van de elementen op deze pagina. */
+#dc-root .st-privacy-alinea-1 { margin: 0; font-size: 20px; max-width: 680px; }
+#dc-root .st-privacy-alinea-2 { margin: 12px 0 0; font-size: 15px; color: #55565A; }
+#dc-root .st-privacy-nav-1 { flex: 1 1 260px; min-width: 0; background: #FFFFFF; border-radius: 20px; padding: 24px; box-shadow: 0 10px 28px rgba(0, 51, 141, 0.08); position: sticky; top: 130px; }
+#dc-root .st-privacy-blok-1 { font-family: 'Helvetica Neue Condensed', 'Roboto Condensed', 'Arial Narrow', sans-serif; font-weight: 700; font-size: 20px; margin-bottom: 10px; }
+#dc-root .st-privacy-lijst-1 { margin: 0; padding-left: 20px; display: flex; flex-direction: column; gap: 8px; font-size: 16px; }
+#dc-root .st-privacy-link-1 { text-decoration: none; font-weight: 600; }
+#dc-root .st-privacy-artikel-1 { flex: 3 1 560px; min-width: 0; background: #FFFFFF; border-radius: 24px; padding: 12px 36px 28px; box-shadow: 0 10px 28px rgba(0, 51, 141, 0.08); }
+#dc-root .st-privacy-sectie-1 { padding: 28px 0; }
+#dc-root .st-privacy-kop-1 { margin: 0 0 12px; font-size: 26px; color: #00338D; }
+#dc-root .st-privacy-sectie-2 { padding: 28px 0; border-top: 1px solid #D6DDEA; }
+#dc-root .st-privacy-blok-2 { margin-top: 8px; background: #FDF1C7; border: 1px solid #F3D97A; border-radius: 16px; padding: 20px 24px; display: flex; flex-wrap: wrap; gap: 16px; align-items: center; justify-content: space-between; }
+#dc-root .st-privacy-blok-3 { color: #3D3E42; font-size: 16px; }
+#dc-root .st-privacy-btn-1 { padding: 12px 20px; border-radius: 999px; background: #00338D; color: #FFFFFF; text-decoration: none; font-weight: 700; }

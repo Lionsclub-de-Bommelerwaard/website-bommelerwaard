@@ -1,4 +1,4 @@
-/* Gegenereerd door build.py uit de <helmet>-stijlen van het ontwerp. Niet handmatig aanpassen; gebruik static/css/extra.css. */
+/* Interactie: hover, focus, overgangen en schermbreedte-regels voor de vaste lb-classes. Op elke pagina. */
 @media (max-width:1100px){.lb-nav-desktop{display:none !important}.lb-nav-toggle{display:flex}}
 @media (min-width:1101px){.lb-mobile-panel{display:none !important}}
 header.lb-sticky{position:sticky;top:0;z-index:60}

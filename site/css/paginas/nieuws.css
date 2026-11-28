@@ -1,0 +1,36 @@
+/*
+ * Pagina /nieuws/ (nieuws): alleen op deze pagina.
+ * De classes met st- vervangen de vroegere style-attributen. Ze staan onder #dc-root, zodat ze net als
+ * inline styling voorgaan op de algemene regels in interactie.css (die met !important blijven winnen).
+ */
+
+/* Pagina-specifieke regels (hover, schermbreedte, beweging). */
+.lb-topic{transition:background-color .18s ease,border-color .18s ease,color .18s ease}
+.lb-news{transition:transform .18s ease,box-shadow .18s ease,border-color .18s ease}
+.lb-news:hover .lb-news-more{text-decoration:underline}
+.lb-news img{transition:transform .4s ease}
+.lb-news:hover img{transform:scale(1.05)}
+.lb-news:hover h2,.lb-news:hover h3{color:#00338D}
+@media (prefers-reduced-motion:reduce){.lb-news:hover img{transform:none}}
+@media (prefers-reduced-motion:reduce){.lb-news:hover{transform:none}}
+
+/* Opmaak van de elementen op deze pagina. */
+#dc-root .st-nieuws-blok-1 { max-width: 1200px; margin: 0 auto; padding: 28px 24px 40px; }
+#dc-root .st-nieuws-alinea-1 { margin: 0; font-size: 20px; max-width: 660px; }
+#dc-root .st-nieuws-news-1 { display: flex; flex-wrap: wrap; background: #FFFFFF; border: 2px solid #D6DDEA; border-radius: 24px; overflow: hidden; text-decoration: none; color: #13203F; }
+#dc-root .st-nieuws-blok-2 { flex: 1 1 340px; min-width: 0; padding: 32px; display: flex; flex-direction: column; gap: 14px; justify-content: center; }
+#dc-root .st-nieuws-tekst-1 { font-size: 13px; font-weight: 700; padding: 4px 12px; border-radius: 999px; background: #EBB700; color: #00338D; }
+#dc-root .st-nieuws-news-more-1 { font-weight: 700; color: #00338D; }
+#dc-root .st-nieuws-sectie-1 { max-width: 1200px; margin: 0 auto; padding: 40px 24px 72px; }
+#dc-root .st-nieuws-blok-3 { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 16px; margin-bottom: 24px; }
+#dc-root .st-nieuws-tekst-2 { opacity: .7; font-weight: 600; }
+#dc-root .st-nieuws-blok-4 { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 20px; }
+#dc-root .st-nieuws-news-2 { background: #FFFFFF; border: 2px solid #D6DDEA; border-radius: 20px; overflow: hidden; text-decoration: none; color: #13203F; display: flex; flex-direction: column; }
+#dc-root .st-nieuws-blok-5 { padding: 20px 22px 24px; display: flex; flex-direction: column; gap: 10px; flex: 1; }
+#dc-root .st-nieuws-subkop-1 { margin: 0; font-size: 23px; line-height: 1.2; }
+#dc-root .st-nieuws-alinea-2 { margin: 0; color: #55565A; font-size: 16px; flex: 1; }
+#dc-root .st-nieuws-news-more-2 { font-weight: 700; color: #00338D; font-size: 16px; }
+#dc-root .st-nieuws-blok-6 { background: #00338D; color: #FFFFFF; border-radius: 24px; padding: 36px 40px; display: flex; flex-wrap: wrap; gap: 24px; align-items: center; justify-content: space-between; }
+#dc-root .st-nieuws-blok-7 { flex: 1 1 420px; min-width: 0; }
+#dc-root .st-nieuws-btn-1 { padding: 12px 22px; border-radius: 999px; background: #EBB700; color: #00338D; text-decoration: none; font-weight: 700; }
+#dc-root .st-nieuws-btn-2 { padding: 10px 18px; border-radius: 999px; border: 2px solid #FFFFFF; color: #FFFFFF; text-decoration: none; font-weight: 700; }

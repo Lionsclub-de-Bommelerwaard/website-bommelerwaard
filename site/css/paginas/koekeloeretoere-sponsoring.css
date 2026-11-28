@@ -1,0 +1,52 @@
+/*
+ * Pagina /koekeloeretoere/sponsoring/ (koekeloeretoere-sponsoring): alleen op deze pagina.
+ * De classes met st- vervangen de vroegere style-attributen. Ze staan onder #dc-root, zodat ze net als
+ * inline styling voorgaan op de algemene regels in interactie.css (die met !important blijven winnen).
+ */
+
+/* Pagina-specifieke regels (hover, schermbreedte, beweging). */
+.lb-card{transition:border-color .18s ease,box-shadow .18s ease,transform .18s ease}
+.lb-card:hover{border-color:#00338D !important;box-shadow:0 8px 20px rgba(0,51,141,.12);transform:translateY(-2px)}
+.lb-topic{transition:background-color .18s ease,border-color .18s ease}
+.lb-card{transition:transform .18s ease,box-shadow .18s ease}
+.lb-card:hover{transform:translateY(-2px);box-shadow:0 10px 24px rgba(0,51,141,.14)}
+@media (prefers-reduced-motion:reduce){.lb-pack:hover,.lb-card:hover{transform:none}}
+
+/* Opmaak van de elementen op deze pagina. */
+#dc-root .st-koekeloeretoere-sponsoring-nav-1 { font-size: 15px; color: #55565A; margin-bottom: 28px; }
+#dc-root .st-koekeloeretoere-sponsoring-titel-1 { margin: 0; font-size: 56px; line-height: 1.03; color: #00338D; }
+#dc-root .st-koekeloeretoere-sponsoring-tekst-1 { display: block; width: 72px; height: 5px; border-radius: 3px; background: #EBB700; }
+#dc-root .st-koekeloeretoere-sponsoring-alinea-1 { margin: 0; font-size: 20px; max-width: 580px; }
+#dc-root .st-koekeloeretoere-sponsoring-blok-1 { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 4px; }
+#dc-root .st-koekeloeretoere-sponsoring-blok-2 { flex: 1 1 380px; min-width: 0; position: relative; }
+#dc-root .st-koekeloeretoere-sponsoring-beeld-1 { width: 100%; height: 380px; object-fit: cover; border-radius: 22px; display: block; box-shadow: 0 14px 34px rgba(0, 51, 141, 0.18); }
+#dc-root .st-koekeloeretoere-sponsoring-blok-3 { position: absolute; left: -16px; bottom: -18px; background: #EBB700; color: #00338D; border-radius: 16px; padding: 14px 18px; box-shadow: 0 10px 24px rgba(0, 31, 87, 0.22); }
+#dc-root .st-koekeloeretoere-sponsoring-blok-4 { font-size: 13px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; }
+#dc-root .st-koekeloeretoere-sponsoring-blok-5 { font-family: 'Helvetica Neue Condensed', 'Roboto Condensed', 'Arial Narrow', sans-serif; font-weight: 800; font-size: 28px; line-height: 1; }
+#dc-root .st-koekeloeretoere-sponsoring-blok-6 { background: #FFFFFF; border: 1px solid #D6DDEA; border-radius: 18px; padding: 22px 24px; }
+#dc-root .st-koekeloeretoere-sponsoring-blok-7 { font-family: 'Helvetica Neue Condensed', 'Roboto Condensed', 'Arial Narrow', sans-serif; font-weight: 800; font-size: 36px; color: #00338D; }
+#dc-root .st-koekeloeretoere-sponsoring-blok-8 { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 18px; }
+#dc-root .st-koekeloeretoere-sponsoring-tekst-2 { display: flex; align-items: center; justify-content: space-between; gap: 12px; }
+#dc-root .st-koekeloeretoere-sponsoring-tekst-3 { font-family: 'Helvetica Neue Condensed', 'Roboto Condensed', 'Arial Narrow', sans-serif; font-weight: 800; font-size: 30px; color: #00338D; }
+#dc-root .st-koekeloeretoere-sponsoring-tekst-4 { flex: 1 1 420px; min-width: 0; display: flex; flex-direction: column; gap: 8px; }
+#dc-root .st-koekeloeretoere-sponsoring-tekst-5 { align-self: flex-start; font-size: 13px; font-weight: 700; padding: 4px 12px; border-radius: 999px; background: #EBB700; color: #00338D; }
+#dc-root .st-koekeloeretoere-sponsoring-tekst-6 { font-family: 'Helvetica Neue Condensed', 'Roboto Condensed', 'Arial Narrow', sans-serif; font-weight: 800; font-size: 34px; line-height: 1.1; }
+#dc-root .st-koekeloeretoere-sponsoring-tekst-7 { color: #D6E0F5; font-size: 17px; max-width: 560px; }
+#dc-root .st-koekeloeretoere-sponsoring-tekst-8 { flex: 0 1 260px; display: flex; flex-direction: column; align-items: flex-start; gap: 12px; }
+#dc-root .st-koekeloeretoere-sponsoring-tekst-9 { display: block; font-size: 14px; color: #D6E0F5; }
+#dc-root .st-koekeloeretoere-sponsoring-tekst-10 { font-family: 'Helvetica Neue Condensed', 'Roboto Condensed', 'Arial Narrow', sans-serif; font-weight: 800; font-size: 44px; color: #EBB700; line-height: 1; }
+#dc-root .st-koekeloeretoere-sponsoring-kop-1 { margin: 0 0 6px; font-size: 34px; }
+#dc-root .st-koekeloeretoere-sponsoring-blok-9 { padding: 16px 18px; border-radius: 14px; background: #FDF1C7; border: 1px solid #F3D97A; font-size: 16px; }
+#dc-root .st-koekeloeretoere-sponsoring-blok-10 { display: grid; grid-template-columns: repeat(auto-fill, minmax(230px, 1fr)); gap: 8px; margin-top: 12px; }
+#dc-root .st-koekeloeretoere-sponsoring-blok-11 { margin-top: 12px; display: flex; flex-wrap: wrap; justify-content: space-between; align-items: baseline; gap: 8px; padding: 14px 18px; border-radius: 14px; background: #E8EDF5; }
+#dc-root .st-koekeloeretoere-sponsoring-tekst-11 { font-weight: 600; }
+#dc-root .st-koekeloeretoere-sponsoring-label-1 { grid-column: 1 / -1; display: flex; flex-direction: column; gap: 6px; font-weight: 600; font-size: 16px; }
+#dc-root .st-koekeloeretoere-sponsoring-blok-12 { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 14px; }
+#dc-root .st-koekeloeretoere-sponsoring-lijst-1 { margin: 0; padding: 0; list-style: none; display: flex; flex-direction: column; gap: 12px; font-size: 16px; }
+#dc-root .st-koekeloeretoere-sponsoring-item-1 { display: flex; gap: 12px; }
+#dc-root .st-koekeloeretoere-sponsoring-tekst-12 { flex: none; width: 30px; height: 30px; border-radius: 50%; background: #EBB700; color: #00338D; font-weight: 800; display: flex; align-items: center; justify-content: center; }
+#dc-root .st-koekeloeretoere-sponsoring-link-1 { color: #EBB700; font-weight: 700; white-space: nowrap; }
+#dc-root .st-koekeloeretoere-sponsoring-link-2 { font-weight: 700; font-size: 15px; white-space: nowrap; }
+#dc-root .st-koekeloeretoere-sponsoring-blok-13 { font-size: 15px; color: #55565A; margin-top: 8px; }
+#dc-root .st-koekeloeretoere-sponsoring-card-1 { display: block; background: #FDF1C7; border: 1px solid #F3D97A; border-radius: 22px; padding: 22px 26px; text-decoration: none; color: #13203F; }
+#dc-root .st-koekeloeretoere-sponsoring-tekst-13 { color: #00338D; font-weight: 700; }

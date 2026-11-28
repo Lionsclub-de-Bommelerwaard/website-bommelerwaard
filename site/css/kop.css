@@ -1,0 +1,24 @@
+/*
+ * Kop van de site: header, desktopmenu en mobiel menu. Op elke pagina.
+ * De classes met st- vervangen de vroegere style-attributen. Ze staan onder #dc-root, zodat ze net als
+ * inline styling voorgaan op de algemene regels in interactie.css (die met !important blijven winnen).
+ */
+
+#dc-root .st-kop-blok-1 { max-width: 1200px; margin: 0 auto; padding: 16px 24px; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 16px; }
+#dc-root .st-kop-link-1 { display: flex; align-items: center; text-decoration: none; }
+#dc-root .st-kop-logo-1 { height: 72px; width: auto; display: block; padding: 8px 12px; }
+#dc-root .st-kop-nav-desktop-1 { display: flex; flex-wrap: wrap; align-items: center; gap: 4px; }
+#dc-root .st-kop-nav-link-1 { padding: 12px 14px; text-decoration: none; color: #13203F; font-weight: 600; }
+#dc-root .st-kop-nav-link-2 { padding: 12px 14px; text-decoration: none; color: #00338D; font-weight: 700; border-bottom: 3px solid #EBB700; }
+#dc-root .st-kop-btn-1 { margin-left: 8px; padding: 12px 20px; border-radius: 999px; background: #00338D; color: #FFFFFF; text-decoration: none; font-weight: 700; }
+#dc-root .st-kop-mobile-panel-1 { background: #00338D; box-shadow: 0 18px 32px rgba(0, 31, 87, 0.28); }
+#dc-root .st-kop-nav-1 { max-width: 1200px; margin: 0 auto; padding: 20px 20px 28px; display: flex; flex-direction: column; gap: 10px; }
+#dc-root .st-kop-mtile-1 { display: flex; justify-content: space-between; align-items: center; gap: 16px; padding: 16px 18px; background: #1A4AA3; border: 2px solid #2F5DB5; border-radius: 16px; text-decoration: none; color: #FFFFFF; }
+#dc-root .st-kop-tekst-1 { font-family: 'Helvetica Neue Condensed', 'Roboto Condensed', 'Arial Narrow', sans-serif; font-weight: 700; font-size: 26px; line-height: 1.1; }
+#dc-root .st-kop-tekst-2 { font-size: 15px; color: #D6E0F5; }
+#dc-root .st-kop-tekst-3 { flex: none; width: 36px; height: 36px; border-radius: 50%; background: #EBB700; display: flex; align-items: center; justify-content: center; }
+#dc-root .st-kop-mtile-2 { display: flex; justify-content: space-between; align-items: center; gap: 16px; padding: 16px 18px; background: #FFFFFF; border: 2px solid #EBB700; border-radius: 16px; text-decoration: none; color: #00338D; }
+#dc-root .st-kop-btn-2 { margin-top: 10px; display: flex; justify-content: center; align-items: center; min-height: 54px; border-radius: 999px; background: #EBB700; color: #00338D; text-decoration: none; font-weight: 700; font-size: 18px; }
+#dc-root .st-kop-blok-2 { margin-top: 14px; padding-top: 18px; border-top: 1px solid #2F5DB5; display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 12px; font-size: 15px; }
+#dc-root .st-kop-link-2 { font-weight: 700; color: #FFFFFF; }
+#dc-root .st-kop-icon-btn-1 { width: 44px; height: 44px; border-radius: 50%; background: rgba(255, 255, 255, 0.14); display: flex; align-items: center; justify-content: center; }

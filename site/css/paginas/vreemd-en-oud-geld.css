@@ -1,0 +1,30 @@
+/*
+ * Pagina /vreemd-en-oud-geld/ (vreemd-en-oud-geld): alleen op deze pagina.
+ * De classes met st- vervangen de vroegere style-attributen. Ze staan onder #dc-root, zodat ze net als
+ * inline styling voorgaan op de algemene regels in interactie.css (die met !important blijven winnen).
+ */
+
+/* Opmaak van de elementen op deze pagina. */
+#dc-root .st-vreemd-en-oud-geld-blok-1 { flex: 3 1 520px; min-width: 0; display: flex; flex-direction: column; gap: 18px; }
+#dc-root .st-vreemd-en-oud-geld-tekst-1 { display: flex; align-items: center; gap: 6px; font-size: 13px; font-weight: 700; padding: 4px 12px; border-radius: 999px; background: #FFFFFF; color: #672666; }
+#dc-root .st-vreemd-en-oud-geld-tekst-2 { width: 12px; height: 12px; border-radius: 50%; background: #672666; }
+#dc-root .st-vreemd-en-oud-geld-beeld-1 { flex: 2 1 320px; min-width: 0; width: 100%; height: 440px; object-fit: cover; object-position: 50% 60%; border-radius: 20px; display: block; }
+#dc-root .st-vreemd-en-oud-geld-beeld-2 { flex: 1 1 420px; min-width: 0; width: 100%; min-height: 300px; object-fit: cover; display: block; }
+#dc-root .st-vreemd-en-oud-geld-blok-2 { flex: 1 1 380px; min-width: 0; padding: 36px; display: flex; flex-direction: column; gap: 14px; }
+#dc-root .st-vreemd-en-oud-geld-blok-3 { display: flex; align-items: flex-start; gap: 10px; color: #55565A; }
+#dc-root .st-vreemd-en-oud-geld-icoon-1 { flex: none; margin-top: 3px; }
+#dc-root .st-vreemd-en-oud-geld-citaat-1 { margin: 8px 0 0; padding: 18px 20px; background: #E8EDF5; border-radius: 14px; font-style: italic; }
+#dc-root .st-vreemd-en-oud-geld-tekst-3 { display: block; margin-top: 8px; font-style: normal; font-size: 15px; color: #55565A; }
+#dc-root .st-vreemd-en-oud-geld-sectie-1 { background: #672666; color: #FFFFFF; }
+#dc-root .st-vreemd-en-oud-geld-blok-4 { max-width: 1200px; margin: 0 auto; padding: 72px 24px; display: flex; flex-wrap: wrap; gap: 48px; align-items: center; }
+#dc-root .st-vreemd-en-oud-geld-blok-5 { flex: 3 1 480px; min-width: 0; display: flex; flex-direction: column; gap: 16px; }
+#dc-root .st-vreemd-en-oud-geld-tekst-4 { display: flex; align-items: center; gap: 8px; font-size: 14px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; color: #F3DDF0; }
+#dc-root .st-vreemd-en-oud-geld-alinea-1 { margin: 0; color: #F3DDF0; }
+#dc-root .st-vreemd-en-oud-geld-btn-1 { align-self: flex-start; margin-top: 4px; display: inline-flex; align-items: center; gap: 8px; padding: 12px 22px; border-radius: 999px; border: 2px solid #FFFFFF; color: #FFFFFF; text-decoration: none; font-weight: 700; }
+#dc-root .st-vreemd-en-oud-geld-blok-6 { flex: 2 1 300px; min-width: 0; background: #FFFFFF; color: #13203F; border-radius: 20px; padding: 32px; display: flex; flex-direction: column; gap: 8px; }
+#dc-root .st-vreemd-en-oud-geld-blok-7 { font-family: 'Helvetica Neue Condensed', 'Roboto Condensed', 'Arial Narrow', sans-serif; font-weight: 800; font-size: 64px; line-height: 1; color: #672666; }
+#dc-root .st-vreemd-en-oud-geld-blok-8 { font-size: 20px; font-weight: 700; }
+#dc-root .st-vreemd-en-oud-geld-link-1 { background: #FFFFFF; border: 1px solid #D6DDEA; border-radius: 18px; overflow: hidden; text-decoration: none; color: #13203F; display: flex; flex-direction: column; }
+#dc-root .st-vreemd-en-oud-geld-blok-9 { padding: 20px 22px 24px; display: flex; flex-direction: column; gap: 8px; }
+#dc-root .st-vreemd-en-oud-geld-subkop-1 { margin: 0; font-size: 21px; line-height: 1.25; }
+#dc-root .st-vreemd-en-oud-geld-beeld-3 { height: 200px; width: 100%; object-fit: cover; object-position: 58% 52%; display: block; }
