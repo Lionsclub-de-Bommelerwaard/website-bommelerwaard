@@ -1,188 +1,258 @@
 {
-  "_uitleg": "Sponsorlogo's op de homepage. Een sponsor is zichtbaar van startdatum tot en met einddatum (JJJJ-MM-DD). Toevoegen: zet het logo in site/assets/ en voeg hier een regel toe. Verwijderen: haal de regel weg of zet de einddatum in het verleden.",
+  "_uitleg": "Sponsorlogo's op de homepage. Een sponsor is zichtbaar van startdatum tot en met einddatum (JJJJ-MM-DD). url (optioneel): het logo wordt een link naar die website. omschrijving (optioneel): korte tekst die verschijnt als je met de muis op het logo staat. Toevoegen: zet het logo in site/assets/ en voeg hier een regel toe. Verwijderen: haal de regel weg of zet de einddatum in het verleden.",
   "sponsoren": [
     {
       "naam": "3TAC",
+      "url": "",
+      "omschrijving": "",
       "logo": "/assets/8c64b367c85fc543a4630dce07e76d28.png",
       "startdatum": "2026-01-01",
       "einddatum": "2099-12-31"
     },
     {
       "naam": "Aggregaat Store",
+      "url": "",
+      "omschrijving": "",
       "logo": "/assets/73ae0574c05ac6d8231062d603b00b1d.png",
       "startdatum": "2026-01-01",
       "einddatum": "2099-12-31"
     },
     {
       "naam": "Ahlmann",
+      "url": "",
+      "omschrijving": "",
       "logo": "/assets/0e39b0a9b53ef990113770e92dbabba2.png",
       "startdatum": "2026-01-01",
       "einddatum": "2099-12-31"
     },
     {
       "naam": "Bakker van Keulen",
+      "url": "",
+      "omschrijving": "",
       "logo": "/assets/056a5e3ac1bf9119b2cc9ece2d8158bc.png",
       "startdatum": "2026-01-01",
       "einddatum": "2099-12-31"
     },
     {
       "naam": "BM Bodem Management",
+      "url": "",
+      "omschrijving": "",
       "logo": "/assets/3d6e8bef2e79a147449475dfb8973f43.png",
       "startdatum": "2026-01-01",
       "einddatum": "2099-12-31"
     },
     {
       "naam": "Bonte Installaties",
+      "url": "",
+      "omschrijving": "",
       "logo": "/assets/e501f2a3aa534715fddaf0cab21d0290.png",
       "startdatum": "2026-01-01",
       "einddatum": "2099-12-31"
     },
     {
       "naam": "De Regiekamer",
+      "url": "https://www.deregiekamer.nl",
+      "omschrijving": "",
       "logo": "/assets/efdd2db4b4d52133efe8a229e44d2ac3.png",
       "startdatum": "2026-01-01",
       "einddatum": "2099-12-31"
     },
     {
       "naam": "De Verdraagzaamheid",
+      "url": "",
+      "omschrijving": "",
       "logo": "/assets/4364e01ed5025b652eb244518de0c053.png",
       "startdatum": "2026-01-01",
       "einddatum": "2099-12-31"
     },
     {
       "naam": "den Eelder",
+      "url": "",
+      "omschrijving": "",
       "logo": "/assets/96b4ca8a69e736540bec4e7e9d9c5dfd.png",
       "startdatum": "2026-01-01",
       "einddatum": "2099-12-31"
     },
     {
       "naam": "Dirk doet marketing",
+      "url": "",
+      "omschrijving": "",
       "logo": "/assets/1616b3e2763b8d3474ff244a83e937b6.png",
       "startdatum": "2026-01-01",
       "einddatum": "2099-12-31"
     },
     {
       "naam": "Feest & Thema Eventstyling",
+      "url": "",
+      "omschrijving": "",
       "logo": "/assets/e5b14753449fe3f6af7f1ee80f06e241.png",
       "startdatum": "2026-01-01",
       "einddatum": "2099-12-31"
     },
     {
       "naam": "Fenix Cijfervangers",
+      "url": "",
+      "omschrijving": "",
       "logo": "/assets/59044580254587feb3ee13383fc67c02.png",
       "startdatum": "2026-01-01",
       "einddatum": "2099-12-31"
     },
     {
       "naam": "Fenix Family Office",
+      "url": "",
+      "omschrijving": "",
       "logo": "/assets/f534f51d83a03babcc8d427a002544e2.png",
       "startdatum": "2026-01-01",
       "einddatum": "2099-12-31"
     },
     {
       "naam": "Huijbregts Notarissen & Adviseurs",
+      "url": "",
+      "omschrijving": "",
       "logo": "/assets/265d0a7a67c89e8c2d759a2a8a2ec3b9.png",
       "startdatum": "2026-01-01",
       "einddatum": "2099-12-31"
     },
     {
       "naam": "Kiyoh",
+      "url": "",
+      "omschrijving": "",
       "logo": "/assets/ba6141b0641c3da16a2ff327e26c3fbb.png",
       "startdatum": "2026-01-01",
       "einddatum": "2099-12-31"
     },
     {
       "naam": "Klantenvertellen",
+      "url": "",
+      "omschrijving": "",
       "logo": "/assets/7e21869568bc9592b3f4c3bc8640d494.png",
       "startdatum": "2026-01-01",
       "einddatum": "2099-12-31"
     },
     {
       "naam": "La Festa Catering",
+      "url": "",
+      "omschrijving": "",
       "logo": "/assets/2819ec3075d290d4154ed8a1ace810b2.png",
       "startdatum": "2026-01-01",
       "einddatum": "2099-12-31"
     },
     {
       "naam": "Mijn KaasKoe & Boer Leving",
+      "url": "",
+      "omschrijving": "",
       "logo": "/assets/b9b477fa03cd99e8565252634be2e381.png",
       "startdatum": "2026-01-01",
       "einddatum": "2099-12-31"
     },
     {
       "naam": "Mulders Top Sprouts",
+      "url": "",
+      "omschrijving": "",
       "logo": "/assets/dd1c6f5e5632a05e5273978aeb536d6f.png",
       "startdatum": "2026-01-01",
       "einddatum": "2099-12-31"
     },
     {
+      "naam": "Nodorum Solutio",
+      "url": "https://nodorumsolutio.com",
+      "omschrijving": "AI enables software development",
+      "logo": "/assets/sponsor-nodorum-solutio.png",
+      "startdatum": "2026-11-28",
+      "einddatum": "2099-12-31"
+    },
+    {
       "naam": "Parcel Metrics",
+      "url": "",
+      "omschrijving": "",
       "logo": "/assets/e5e994f700ccae36f65139abe58be015.png",
       "startdatum": "2026-01-01",
       "einddatum": "2099-12-31"
     },
     {
       "naam": "RAVAS",
+      "url": "",
+      "omschrijving": "",
       "logo": "/assets/b0e182ccab60572b328abe6e8cf3bae0.png",
       "startdatum": "2026-01-01",
       "einddatum": "2099-12-31"
     },
     {
       "naam": "Slagerij Corianne van der Linden",
+      "url": "",
+      "omschrijving": "",
       "logo": "/assets/9f3acd16d44961916965d3e3f9081a3f.png",
       "startdatum": "2026-01-01",
       "einddatum": "2099-12-31"
     },
     {
       "naam": "Solipsis",
+      "url": "",
+      "omschrijving": "",
       "logo": "/assets/ac5f6bb4e590488a506890e7fbdbc425.png",
       "startdatum": "2026-01-01",
       "einddatum": "2099-12-31"
     },
     {
       "naam": "Stadsapotheek Zaltbommel",
+      "url": "",
+      "omschrijving": "",
       "logo": "/assets/ceb4795a2d4c05dee12c6446df573245.png",
       "startdatum": "2026-01-01",
       "einddatum": "2099-12-31"
     },
     {
       "naam": "Suus damesmode Zaltbommel",
+      "url": "",
+      "omschrijving": "",
       "logo": "/assets/7ff5aec3a493bd2452ca30a4d36b5269.png",
       "startdatum": "2026-01-01",
       "einddatum": "2099-12-31"
     },
     {
       "naam": "TEN Advocaten",
+      "url": "",
+      "omschrijving": "",
       "logo": "/assets/772afbbc06e3c74fdf7d163f2933569b.png",
       "startdatum": "2026-01-01",
       "einddatum": "2099-12-31"
     },
     {
       "naam": "Vakantiefestival",
+      "url": "",
+      "omschrijving": "",
       "logo": "/assets/9156a400c2d985d935648a0cb6eabea6.png",
       "startdatum": "2026-01-01",
       "einddatum": "2099-12-31"
     },
     {
       "naam": "van Delft Staal",
+      "url": "",
+      "omschrijving": "",
       "logo": "/assets/f2016b2e9c9fa59dde32c37bcc6e39a5.png",
       "startdatum": "2026-01-01",
       "einddatum": "2099-12-31"
     },
     {
       "naam": "Van der Ven",
+      "url": "",
+      "omschrijving": "",
       "logo": "/assets/5dddd71b3b15dd686bc7299eb06ee42a.png",
       "startdatum": "2026-01-01",
       "einddatum": "2099-12-31"
     },
     {
       "naam": "Van Laarhoven Spuiterij",
+      "url": "",
+      "omschrijving": "",
       "logo": "/assets/158ebac22c6bce5dad9218c37e5b95da.png",
       "startdatum": "2026-01-01",
       "einddatum": "2099-12-31"
     },
     {
       "naam": "Wonen & Welzijn",
+      "url": "",
+      "omschrijving": "",
       "logo": "/assets/1045ed21a67e2c406b918a3117351b0a.png",
       "startdatum": "2026-01-01",
       "einddatum": "2099-12-31"

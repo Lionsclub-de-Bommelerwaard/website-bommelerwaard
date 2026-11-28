@@ -1,5 +1,6 @@
 // Sponsorlogo's op de homepage uit /data/sponsoren.json.
-// Per sponsor: naam, logo (pad naar het plaatje), startdatum en einddatum (JJJJ-MM-DD).
+// Per sponsor: naam, url (optioneel, maakt het logo klikbaar), omschrijving (optioneel, tooltip),
+// logo (pad naar het plaatje), startdatum en einddatum (JJJJ-MM-DD).
 // Een sponsor is zichtbaar van de startdatum tot en met de einddatum.
 (function () {
   'use strict';
@@ -42,7 +43,20 @@
     img.setAttribute('style', 'max-width: ' + MAX_BREED + 'px; max-height: ' + MAX_HOOG + 'px; object-fit: contain; border-radius: 8px; display: block');
     if (img.complete && img.naturalWidth) maatVoorLogo(img);
     else img.addEventListener('load', function () { maatVoorLogo(img); });
-    wrap.appendChild(img);
+    var titel = s.omschrijving ? s.naam + ' – ' + s.omschrijving : '';
+    if (s.url && /^https?:\/\//.test(s.url)) {
+      var a = document.createElement('a');
+      a.href = s.url;
+      a.target = '_blank';
+      a.rel = 'noopener';
+      if (titel) a.title = titel;
+      if (kopie) a.tabIndex = -1;
+      a.appendChild(img);
+      wrap.appendChild(a);
+    } else {
+      if (titel) img.title = titel;
+      wrap.appendChild(img);
+    }
     return wrap;
   }
 
