@@ -44,8 +44,19 @@
     img.style.height = Math.round(h) + 'px';
   }
 
-  // Eén zwevende tooltip voor de omschrijving. Hij hangt aan <body>, zodat de band
-  // (overflow: hidden) hem niet afknipt. De band staat stil zolang de muis erop staat.
+  // Bij hover (of toetsenbordfocus) wordt het logo iets groter.
+  (function () {
+    var css = document.createElement('style');
+    css.textContent =
+      '[data-sponsors] img{transition:transform .2s ease}' +
+      '[data-sponsors] .lb-marquee-track>div:hover img,[data-sponsors] .lb-logo-tile:hover img,' +
+      '[data-sponsors] a:focus-visible img{transform:scale(1.15)}' +
+      '@media (prefers-reduced-motion:reduce){[data-sponsors] img{transition:none}}';
+    document.head.appendChild(css);
+  })();
+
+  // Eén zwevende tooltip met de omschrijving, onder het logo. Hij hangt aan <body>, zodat de
+  // band (overflow: hidden) hem niet afknipt. De band staat stil zolang de muis erop staat.
   var tip = null;
   var tipBij = null;   // [element, sponsor, link] waar de tooltip nu bij hoort
   function toonTip(el, s, link) {
@@ -54,7 +65,7 @@
       tip = document.createElement('div');
       tip.className = 'lb-sponsor-tip';
       tip.setAttribute('role', 'tooltip');
-      tip.setAttribute('style', 'font-family: \'Helvetica Neue\', Helvetica, Arial, sans-serif; position: fixed; z-index: 1000; max-width: 260px; padding: 10px 14px; border-radius: 12px; background: #00338D; color: #FFFFFF; font-size: 15px; line-height: 1.4; box-shadow: 0 10px 24px rgba(0, 31, 87, 0.28); pointer-events: none; transform: translate(-50%, -100%); transition: opacity .15s ease; opacity: 0');
+      tip.setAttribute('style', 'font-family: \'Helvetica Neue\', Helvetica, Arial, sans-serif; position: fixed; z-index: 1000; max-width: 260px; padding: 10px 14px; border-radius: 12px; background: #00338D; color: #FFFFFF; font-size: 15px; line-height: 1.4; box-shadow: 0 10px 24px rgba(0, 31, 87, 0.28); pointer-events: none; transform: translate(-50%, 0); transition: opacity .15s ease; opacity: 0');
       document.body.appendChild(tip);
     }
     tip.innerHTML = '';
@@ -66,7 +77,7 @@
     var r = el.getBoundingClientRect();
     var x = Math.min(Math.max(r.left + r.width / 2, 140), window.innerWidth - 140);
     tip.style.left = x + 'px';
-    tip.style.top = (r.top + 4) + 'px';
+    tip.style.top = (r.bottom + 6) + 'px';
     tip.style.opacity = '1';
   }
   function verbergTip() { tipBij = null; if (tip) tip.style.opacity = '0'; }
