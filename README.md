@@ -16,7 +16,8 @@ npm test
 - `site/css/kop.css` en `site/css/voet.css`: header met menu, en footer.
 - `site/css/componenten.css`: opmaak die op meerdere pagina's terugkomt.
 - `site/css/paginas/<pagina>.css`: opmaak die alleen op die pagina voorkomt.
-- `site/js/pagina/<pagina>.js`: paginalogica (menu, filters, formulieren); `standaard.js` voor pagina's met alleen het menu.
+- `site/js/pagina/basis.js`: basisklasse `LBPagina` (bouwt op `DCLogic` uit `dc-runtime.js`) met het menu en de fotocarrousel met lightbox.
+- `site/js/pagina/<pagina>.js`: `class Component extends LBPagina` met de eigen `renderVals()` van de pagina; `standaard.js` voor pagina's met alleen het menu.
 
 De `st-`-classes vervangen de vroegere style-attributen. Ze staan onder `#dc-root`, zodat ze net als inline styling
 voorgaan op de algemene regels. Styling die van een waarde afhangt (zoals `{{accent}}`) staat nog in de html.

@@ -1,26 +1,8 @@
-// Paginalogica (menu en eventuele interactie) voor: /koekeloeretoere/
-class Component extends DCLogic {
-  menuVals() {
-    var self = this;
-    var o = !!(this.state && this.state.menuOpen);
-    return {
-      menuOpen: o,
-      menuClosed: !o,
-      menuExpanded: o ? 'true' : 'false',
-      menuLabel: o ? 'Menu sluiten' : 'Menu openen',
-      toggleMenu: function () { self.setState({ menuOpen: !o }); },
-      closeMenu: function () { self.setState({ menuOpen: false }); }
-    };
-  }
+// Paginalogica (bouwt op LBPagina uit basis.js) voor: /koekeloeretoere/
+class Component extends LBPagina {
   renderVals() {
     var self = this;
     var st = this.state || {};
-    var lb = (typeof st.lb === 'number') ? st.lb : -1;
-    var N = PHOTOS.length;
-    var photos = PHOTOS.map(function (p, k) {
-      return { src: p[0], pos: p[2], label: 'Bekijk foto ' + (k + 1) + ' groot: ' + p[1], open: function () { self.setState({ lb: k }); } };
-    });
-    var scroll = function (dir) { try { var el = document.getElementById('lb-foto-track'); if (el) el.scrollBy({ left: dir * el.clientWidth * 0.9, behavior: 'smooth' }); } catch (e) {} };
     var extra = st.extra || 0;
     var pers = 2 + extra;
     var gift = st.gift || 0;
@@ -67,14 +49,8 @@ class Component extends DCLogic {
         style: 'display: flex; align-items: center; gap: 10px; min-height: 48px; padding: 8px 14px; border-radius: 12px; font-size: 16px; cursor: pointer; ' + (on ? 'background: #FFF8DD; border: 2px solid #00338D;' : 'background: #FFFFFF; border: 2px solid #D6DDEA;') };
     });
     var sponsLines = packs.filter(function (p) { return sp[p[0]]; }).map(function (p) { return { name: p[1], price: (p[0] === 'hoofd' ? 'vanaf ' : '') + fmt(p[2]) }; });
-    return Object.assign(this.menuVals(), {
+    return Object.assign(this.menuVals(), this.galleryVals(PHOTOS), {
       accent: this.props.accent ?? '#EBB700',
-      photos: photos, photoCount: N,
-      scrollPrev: function () { scroll(-1); }, scrollNext: function () { scroll(1); },
-      lbOpen: lb > -1, lbSrc: lb > -1 ? PHOTOS[lb][0] : '', lbAlt: lb > -1 ? PHOTOS[lb][1] : '', lbCounter: (lb + 1) + ' / ' + N,
-      lbClose: function () { self.setState({ lb: -1 }); },
-      lbPrev: function () { self.setState({ lb: (lb - 1 + N) % N }); },
-      lbNext: function () { self.setState({ lb: (lb + 1) % N }); },
       extra: extra,
       persLabel: pers === 1 ? '1 persoon' : pers + ' personen',
       kids: kids, hasKids: kids > 0, kidsTxt: fmt(kidsAmt),
@@ -197,4 +173,4 @@ var PHOTOS = [
 ]
 ];
 
-DC.mount(document.getElementById('dc-root'), document.getElementById('dc-tpl').textContent, Component, {"accent": "#EBB700"});
+LBPagina.start(Component, {"accent": "#EBB700"});

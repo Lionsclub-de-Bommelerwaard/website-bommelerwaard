@@ -1,40 +1,6 @@
-// Paginalogica (menu en eventuele interactie) voor: /varen-met-ouderen/
-class Component extends DCLogic {
-  menuVals() {
-    var self = this;
-    var o = !!(this.state && this.state.menuOpen);
-    return {
-      menuOpen: o,
-      menuClosed: !o,
-      menuExpanded: o ? 'true' : 'false',
-      menuLabel: o ? 'Menu sluiten' : 'Menu openen',
-      toggleMenu: function () { self.setState({ menuOpen: !o }); },
-      closeMenu: function () { self.setState({ menuOpen: false }); }
-    };
-  }
-  galleryVals() {
-    var self = this;
-    var st = this.state || {};
-    var lb = (typeof st.lb === 'number') ? st.lb : -1;
-    var N = PHOTOS.length;
-    var SHOW = 24;
-    var photos = PHOTOS.slice(0, SHOW).map(function (p, k) {
-      return { src: p[0], pos: p[2], label: 'Bekijk foto ' + (k + 1) + ' groot: ' + p[1], open: function () { self.setState({ lb: k }); } };
-    });
-    var scroll = function (dir) { try { var el = document.getElementById('lb-foto-track'); if (el) el.scrollBy({ left: dir * el.clientWidth * 0.9, behavior: 'smooth' }); } catch (e) {} };
-    return {
-      photos: photos,
-      scrollPrev: function () { scroll(-1); }, scrollNext: function () { scroll(1); },
-      totalLabel: 'Bekijk alle ' + N + ' foto\'s',
-      openAll: function () { self.setState({ lb: 0 }); },
-      lbCount: (lb + 1) + ' / ' + N,
-      lbOpen: lb > -1, lbSrc: lb > -1 ? PHOTOS[lb][0] : '', lbAlt: lb > -1 ? PHOTOS[lb][1] : '',
-      lbClose: function () { self.setState({ lb: -1 }); },
-      lbPrev: function () { self.setState({ lb: (lb - 1 + N) % N }); },
-      lbNext: function () { self.setState({ lb: (lb + 1) % N }); }
-    };
-  }
-  renderVals() { return Object.assign(this._rv0(), this.galleryVals()); }
+// Paginalogica (bouwt op LBPagina uit basis.js) voor: /varen-met-ouderen/
+class Component extends LBPagina {
+  renderVals() { return Object.assign(this._rv0(), this.galleryVals(PHOTOS, 24)); }
   _rv0() {
     var self = this;
     var sent = !!(this.state && this.state.sent);
@@ -573,4 +539,4 @@ var PHOTOS = [
 ]
 ];
 
-DC.mount(document.getElementById('dc-root'), document.getElementById('dc-tpl').textContent, Component, {});
+LBPagina.start(Component);

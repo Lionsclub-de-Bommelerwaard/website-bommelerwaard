@@ -1,17 +1,5 @@
-// Paginalogica (menu en eventuele interactie) voor: /
-class Component extends DCLogic {
-  menuVals() {
-    var self = this;
-    var o = !!(this.state && this.state.menuOpen);
-    return {
-      menuOpen: o,
-      menuClosed: !o,
-      menuExpanded: o ? 'true' : 'false',
-      menuLabel: o ? 'Menu sluiten' : 'Menu openen',
-      toggleMenu: function () { self.setState({ menuOpen: !o }); },
-      closeMenu: function () { self.setState({ menuOpen: false }); }
-    };
-  }
+// Paginalogica (bouwt op LBPagina uit basis.js) voor: /
+class Component extends LBPagina {
   constructor(props) {
     super(props);
     this.state = { filter: 'alles' };
@@ -62,4 +50,4 @@ class Component extends DCLogic {
   }
 }
 
-DC.mount(document.getElementById('dc-root'), document.getElementById('dc-tpl').textContent, Component, {"accent": "#EBB700"});
+LBPagina.start(Component, {"accent": "#EBB700"});
