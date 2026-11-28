@@ -31,7 +31,9 @@
   // Eén zwevende tooltip voor de omschrijving. Hij hangt aan <body>, zodat de band
   // (overflow: hidden) hem niet afknipt. De band staat stil zolang de muis erop staat.
   var tip = null;
-  function toonTip(el, s) {
+  var tipBij = null;   // [wrap, sponsor, link] waar de tooltip nu bij hoort
+  function toonTip(el, s, link) {
+    tipBij = [el, s, link || null];
     if (!tip) {
       tip = document.createElement('div');
       tip.className = 'lb-sponsor-tip';
@@ -51,8 +53,12 @@
     tip.style.top = (r.top + 4) + 'px';
     tip.style.opacity = '1';
   }
-  function verbergTip() { if (tip) tip.style.opacity = '0'; }
-  window.addEventListener('scroll', verbergTip, { passive: true });
+  function verbergTip() { tipBij = null; if (tip) tip.style.opacity = '0'; }
+  // Bij scrollen: tooltip meeschuiven als het logo toetsenbordfocus heeft, anders verbergen.
+  window.addEventListener('scroll', function () {
+    if (tipBij && tipBij[2] && document.activeElement === tipBij[2]) toonTip(tipBij[0], tipBij[1], tipBij[2]);
+    else verbergTip();
+  }, { passive: true });
 
   function logo(s, kopie) {
     var wrap = document.createElement('div');
@@ -87,8 +93,13 @@
       wrap.addEventListener('mouseenter', function () { toonTip(wrap, s); });
       wrap.addEventListener('mouseleave', verbergTip);
       if (doel !== img) {
-        doel.addEventListener('focus', function () { toonTip(wrap, s); });
-        doel.addEventListener('blur', verbergTip);
+        doel.addEventListener('focus', function () { toonTip(wrap, s, doel); });
+        doel.addEventListener('blur', function () {
+          verbergTip();
+          // De browser schuift de band opzij om het gefocuste logo te tonen; zet dat terug.
+          var box = wrap.closest('.lb-marquee');
+          if (box) box.scrollLeft = 0;
+        });
         doel.setAttribute('aria-label', s.naam + ': ' + s.omschrijving + ' (opent in een nieuw tabblad)');
       }
     }

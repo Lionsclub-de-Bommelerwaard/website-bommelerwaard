@@ -19,7 +19,7 @@
 <link rel="stylesheet" href="/css/site.css">
 <style>
 @media (prefers-reduced-motion:reduce){.lb-btn:hover,.lb-mtile:hover{transform:none}}
-@media (prefers-reduced-motion:reduce){.lb-marquee-track{animation:none;flex-wrap:wrap;width:auto;justify-content:center}.lb-marquee-kopie{display:none !important}}
+.lb-marquee:focus-within .lb-marquee-track{animation-play-state:paused}@media (prefers-reduced-motion:reduce){.lb-marquee-track{animation:none;flex-wrap:wrap;width:auto;justify-content:center}.lb-marquee-kopie{display:none !important}}
 @media (max-width:480px){.lb-logo{height:56px !important}}
 @media (max-width:600px){h1{font-size:clamp(32px,9vw,44px) !important;line-height:1.08 !important;overflow-wrap:break-word}}
 .lb-home-news{overflow:hidden;margin:-8px -8px;padding:8px}.lb-home-news-track{display:flex;gap:20px}.lb-home-news-track>.lb-news{flex:0 0 calc((100% - 40px)/3);min-width:0}@media (max-width:960px){.lb-home-news-track>.lb-news{flex-basis:calc((100% - 20px)/2)}}@media (max-width:640px){.lb-home-news-track>.lb-news{flex-basis:100%}}.lb-news{transition:transform .2s ease,box-shadow .2s ease,border-color .2s ease}.lb-news:hover{transform:translateY(-4px);box-shadow:0 16px 32px rgba(0,51,141,.16);border-color:#00338D !important}.lb-news-img{transition:transform .4s ease}.lb-news:hover .lb-news-img{transform:scale(1.05)}.lb-news:hover .lb-news-title{color:#00338D}.lb-news:focus-visible{outline:3px solid #EBB700;outline-offset:3px}@media (prefers-reduced-motion:reduce){.lb-news:hover,.lb-news:hover .lb-news-img{transform:none}}
@@ -656,7 +656,7 @@ DC.mount(document.getElementById('dc-root'), document.getElementById('dc-tpl').t
 </script>
 <script src="/js/nieuws.js?v=2"></script>
 <script src="/js/home-nieuws.js?v=2"></script>
-<script src="/js/sponsoren.js?v=3"></script>
+<script src="/js/sponsoren.js?v=4"></script>
 
 </body>
 </html>
