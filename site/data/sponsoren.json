@@ -3,7 +3,7 @@
   "sponsors": [
     {
       "name": "3TAC",
-      "url": "",
+      "url": "https://www.3tac.nl",
       "description": "",
       "logo": "/assets/sponsor-3tac.png",
       "visibility": {
@@ -61,6 +61,10 @@
           "visibleUntil": "2099-12-31"
         },
         "koekeloeretoere": {
+          "visibleFrom": "2026-01-01",
+          "visibleUntil": "2099-12-31"
+        },
+        "kacheltjes": {
           "visibleFrom": "2026-01-01",
           "visibleUntil": "2099-12-31"
         }
@@ -176,7 +180,7 @@
     },
     {
       "name": "Fenix Cijfervangers",
-      "url": "",
+      "url": "https://fenix-cijfervangers.nl",
       "description": "",
       "logo": "/assets/sponsor-fenix-cijfervangers.png",
       "visibility": {
@@ -416,7 +420,7 @@
     },
     {
       "name": "Van Laarhoven Spuiterij",
-      "url": "",
+      "url": "https://laarhovenspuiterij.nl",
       "description": "",
       "logo": "/assets/sponsor-van-laarhoven-spuiterij.png",
       "visibility": {
@@ -440,7 +444,7 @@
     },
     {
       "name": "Bistro In Petto",
-      "url": "",
+      "url": "https://bistroinpetto.nl",
       "description": "",
       "logo": "/assets/sponsor-bistro-in-petto.png",
       "visibility": {
@@ -456,7 +460,7 @@
     },
     {
       "name": "Waerde State",
-      "url": "",
+      "url": "https://www.waerdestate.nl",
       "description": "",
       "logo": "/assets/sponsor-waerde-state.png",
       "visibility": {
@@ -472,7 +476,7 @@
     },
     {
       "name": "Fimetec",
-      "url": "",
+      "url": "https://fimetec.nl",
       "description": "",
       "logo": "/assets/sponsor-fimetec.png",
       "visibility": {
@@ -484,7 +488,7 @@
     },
     {
       "name": "Van der Pijl",
-      "url": "",
+      "url": "https://hvanderpijl.nl",
       "description": "",
       "logo": "/assets/sponsor-van-der-pijl.png",
       "visibility": {
@@ -495,20 +499,8 @@
       }
     },
     {
-      "name": "Van Keulen",
-      "url": "",
-      "description": "",
-      "logo": "/assets/sponsor-van-keulen.png",
-      "visibility": {
-        "kacheltjes": {
-          "visibleFrom": "2026-01-01",
-          "visibleUntil": "2099-12-31"
-        }
-      }
-    },
-    {
       "name": "In den Verdwaalde Koogel",
-      "url": "",
+      "url": "https://koogelheusden.nl",
       "description": "",
       "logo": "/assets/sponsor-in-den-verdwaalde-koogel.png",
       "visibility": {
@@ -520,7 +512,7 @@
     },
     {
       "name": "GP Equipment",
-      "url": "",
+      "url": "https://gp-equipment.com",
       "description": "",
       "logo": "/assets/sponsor-gp-equipment.png",
       "visibility": {
@@ -532,7 +524,7 @@
     },
     {
       "name": "CoolCare Holland",
-      "url": "",
+      "url": "https://www.coolcareholland.nl",
       "description": "",
       "logo": "/assets/sponsor-coolcare-holland.png",
       "visibility": {
@@ -544,7 +536,7 @@
     },
     {
       "name": "Meerman Machines",
-      "url": "",
+      "url": "https://www.meerman.nl",
       "description": "",
       "logo": "/assets/sponsor-meerman-machines.png",
       "visibility": {
@@ -556,7 +548,7 @@
     },
     {
       "name": "One Risk",
-      "url": "",
+      "url": "https://oneriskadvisory.nl",
       "description": "",
       "logo": "/assets/sponsor-one-risk.png",
       "visibility": {
@@ -568,7 +560,7 @@
     },
     {
       "name": "Van Boort",
-      "url": "",
+      "url": "https://www.vanboort.nl",
       "description": "",
       "logo": "/assets/sponsor-van-boort.png",
       "visibility": {
@@ -580,7 +572,7 @@
     },
     {
       "name": "Walking Football Team Nivo Sparta",
-      "url": "",
+      "url": "https://www.nivo-sparta.nl/1199/walkingfootball/",
       "description": "",
       "logo": "/assets/sponsor-walking-football-team-nivo-sparta.png",
       "visibility": {
@@ -592,7 +584,7 @@
     },
     {
       "name": "Paul Meijering",
-      "url": "",
+      "url": "https://www.paulmeijering.nl",
       "description": "",
       "logo": "/assets/sponsor-paul-meijering.png",
       "visibility": {
@@ -616,7 +608,7 @@
     },
     {
       "name": "Bouwplanmakers",
-      "url": "",
+      "url": "https://bouwplanmakers.nl",
       "description": "",
       "logo": "/assets/sponsor-bouwplanmakers.png",
       "visibility": {
@@ -628,7 +620,7 @@
     },
     {
       "name": "i3 Organisatie Ontwikkeling",
-      "url": "",
+      "url": "https://i3-ontwikkeling.nl/",
       "description": "",
       "logo": "/assets/sponsor-i3-organisatie-ontwikkeling.png",
       "visibility": {
@@ -652,7 +644,7 @@
     },
     {
       "name": "Vallei",
-      "url": "",
+      "url": "https://vallei-advocaten.nl",
       "description": "",
       "logo": "/assets/sponsor-vallei.png",
       "visibility": {
@@ -664,7 +656,7 @@
     },
     {
       "name": "Relly",
-      "url": "",
+      "url": "https://www.rellyminiloader.nl",
       "description": "",
       "logo": "/assets/sponsor-relly.png",
       "visibility": {
@@ -676,7 +668,7 @@
     },
     {
       "name": "Amadeus",
-      "url": "",
+      "url": "https://www.amadeuswellseind.nl",
       "description": "",
       "logo": "/assets/sponsor-amadeus.png",
       "visibility": {
@@ -700,7 +692,7 @@
     },
     {
       "name": "Ammertrucks",
-      "url": "",
+      "url": "https://ammertrucks.nl",
       "description": "",
       "logo": "/assets/sponsor-ammertrucks.png",
       "visibility": {
@@ -712,7 +704,7 @@
     },
     {
       "name": "Crayon",
-      "url": "",
+      "url": "https://www.crayon.nl",
       "description": "",
       "logo": "/assets/sponsor-crayon.png",
       "visibility": {
@@ -724,7 +716,7 @@
     },
     {
       "name": "Summa",
-      "url": "",
+      "url": "https://partners.summa.nl",
       "description": "",
       "logo": "/assets/sponsor-summa.png",
       "visibility": {
@@ -736,7 +728,7 @@
     },
     {
       "name": "Studio-073",
-      "url": "",
+      "url": "https://www.studio-073.nl",
       "description": "",
       "logo": "/assets/sponsor-studio-073.png",
       "visibility": {
