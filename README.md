@@ -10,6 +10,16 @@ Ze gebruiken alleen de ingebouwde testrunner van Node (18 of nieuwer), dus er ho
 npm test
 ```
 
+## Deployen
+Een push naar `main` bouwt en publiceert de site naar SmarterASP.net via FTP. De deploy-build kopieert `site/` naar `dist/` en minimaliseert alle JavaScript-bestanden; de bronbestanden blijven leesbaar.
+
+Stel in GitHub repository **Settings → Secrets and variables → Actions** deze repository secrets in:
+- `FTP_SERVER`
+- `FTP_USERNAME`
+- `FTP_PASSWORD`
+
+Optioneel kan `FTP_SERVER_DIR` worden ingesteld als de FTP-root niet `/wwwroot/` is. De workflow annuleert een eerdere gelijktijdige deploy en controleert na de upload of `https://www.lionsbommelerwaard.nl/` bereikbaar is.
+
 ## Opbouw van css en js
 - `site/css/interactie.css`: hover, focus en overgangen voor de vaste `lb-`-classes.
 - `site/css/basis.css`: regels die op elke pagina gelden.
