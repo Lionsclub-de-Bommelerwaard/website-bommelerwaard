@@ -9,11 +9,7 @@
   var INTERVAL_MS = 5000;
   var DUUR_MS = 600;
 
-  function escapeHtml(value) {
-    return String(value == null ? '' : value).replace(/[&<>"']/g, function (ch) {
-      return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[ch];
-    });
-  }
+  var escapeHtml = LB.escapeHtml;
 
   var CATS = { evenement: 'Evenement', actie: 'Doorlopende actie', jongeren: 'Jongeren', internationaal: 'Internationaal' };
 
@@ -30,18 +26,6 @@
       '<span style="font-size: 14px; color: #55565A">' + escapeHtml(meta) + '</span>' +
       '<h3 class="lb-news-title" style="margin: 0; font-size: 21px; line-height: 1.25">' + escapeHtml(n.title) + '</h3></div>';
     return a;
-  }
-
-  // Nieuwste eerst: op visibleFrom (publicatiedatum), bij gelijke datum de volgorde in nieuws.json.
-  function nieuwste(items) {
-    return items
-      .map(function (n, i) { return { n: n, i: i }; })
-      .sort(function (a, b) {
-        var da = a.n.visibleFrom || '', db = b.n.visibleFrom || '';
-        return da < db ? 1 : da > db ? -1 : a.i - b.i;
-      })
-      .slice(0, MAX_BERICHTEN)
-      .map(function (x) { return x.n; });
   }
 
   var timer = null;
@@ -66,7 +50,7 @@
     if (timer) { clearInterval(timer); timer = null; }
     gepauzeerd = false;
 
-    var lijst = nieuwste(items);
+    var lijst = LB.nieuwste(items, MAX_BERICHTEN);
     track = document.createElement('div');
     track.className = 'lb-home-news-track';
     var box = document.querySelector('.lb-home-news');

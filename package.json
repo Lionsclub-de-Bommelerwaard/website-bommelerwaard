@@ -1,0 +1,8 @@
+{
+  "name": "website-bommelerwaard",
+  "private": true,
+  "description": "Website van Lionsclub De Bommelerwaard",
+  "scripts": {
+    "test": "node --test"
+  }
+}
