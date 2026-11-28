@@ -1,7 +1,7 @@
 // Sponsorlogo's uit /data/sponsoren.json, per plek op de site.
 //
 // Per sponsor: name, url (optioneel, maakt het logo klikbaar, opent in een nieuw tabblad),
-// description (optioneel, verschijnt in een tooltip bij hover), logo (pad naar het plaatje),
+// description (optioneel, verschijnt onder de naam in de tooltip bij hover; zonder description toont de tooltip alleen de naam), logo (pad naar het plaatje),
 // tileBackground (optioneel, achtergrondkleur van de tegel, bijv. voor een wit logo)
 // en visibility: per plek een visibleFrom en visibleUntil.
 //
@@ -55,7 +55,7 @@
     document.head.appendChild(css);
   })();
 
-  // Eén zwevende tooltip met de omschrijving, onder het logo. Hij hangt aan <body>, zodat de
+  // Eén zwevende tooltip met de naam en eventueel de omschrijving, onder het logo. Hij hangt aan <body>, zodat de
   // band (overflow: hidden) hem niet afknipt. De band staat stil zolang de muis erop staat.
   var tip = null;
   var tipBij = null;   // [element, sponsor, link] waar de tooltip nu bij hoort
@@ -73,7 +73,7 @@
     b.textContent = s.name;
     b.style.display = 'block';
     tip.appendChild(b);
-    tip.appendChild(document.createTextNode(s.description));
+    if (s.description) tip.appendChild(document.createTextNode(s.description));
     var r = el.getBoundingClientRect();
     var x = Math.min(Math.max(r.left + r.width / 2, 140), window.innerWidth - 140);
     tip.style.left = x + 'px';
@@ -112,7 +112,7 @@
     } else {
       wrap.appendChild(img);
     }
-    if (s.description) {
+    if (s.name) {
       wrap.addEventListener('mouseenter', function () { toonTip(wrap, s); });
       wrap.addEventListener('mouseleave', verbergTip);
       if (doel !== img) {
@@ -123,7 +123,7 @@
           var box = wrap.closest('.lb-marquee');
           if (box) box.scrollLeft = 0;
         });
-        doel.setAttribute('aria-label', s.name + ': ' + s.description + ' (opent in een nieuw tabblad)');
+        doel.setAttribute('aria-label', s.name + (s.description ? ': ' + s.description : '') + ' (opent in een nieuw tabblad)');
       }
     }
   }
