@@ -351,6 +351,7 @@
       "url": "https://www.suusonline.com/",
       "description": "",
       "logo": "/assets/sponsor-suus-damesmode-zaltbommel.png",
+      "tileBackground": "#6E001A",
       "visibility": {
         "home": {
           "visibleFrom": "2026-01-01",
@@ -491,6 +492,7 @@
       "url": "https://hvanderpijl.nl",
       "description": "",
       "logo": "/assets/sponsor-van-der-pijl.png",
+      "tileBackground": "#000000",
       "visibility": {
         "kacheltjes": {
           "visibleFrom": "2026-01-01",
@@ -635,6 +637,7 @@
       "url": "",
       "description": "",
       "logo": "/assets/sponsor-kroon.png",
+      "tileBackground": "#000000",
       "visibility": {
         "kacheltjes": {
           "visibleFrom": "2026-01-01",
@@ -647,6 +650,7 @@
       "url": "https://vallei-advocaten.nl",
       "description": "",
       "logo": "/assets/sponsor-vallei.png",
+      "tileBackground": "#0070B8",
       "visibility": {
         "kacheltjes": {
           "visibleFrom": "2026-01-01",
@@ -695,6 +699,7 @@
       "url": "https://ammertrucks.nl",
       "description": "",
       "logo": "/assets/sponsor-ammertrucks.png",
+      "tileBackground": "#549E46",
       "visibility": {
         "kacheltjes": {
           "visibleFrom": "2026-01-01",
@@ -707,6 +712,7 @@
       "url": "https://www.crayon.nl",
       "description": "",
       "logo": "/assets/sponsor-crayon.png",
+      "tileBackground": "#231F20",
       "visibility": {
         "kacheltjes": {
           "visibleFrom": "2026-01-01",
