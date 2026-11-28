@@ -45,30 +45,45 @@
   }
 
   var timer = null;
+  var track = null;
+  var gepauzeerd = false;
+
+  // De paginaopbouw (dc-runtime) kan het blok .lb-home-news vervangen door een nieuw, leeg
+  // element. Hang de rij daarom na elke render opnieuw in het blok als hij er niet meer in zit.
+  function koppel() {
+    var box = document.querySelector('.lb-home-news');
+    if (!box || !track || track.parentNode === box) return;
+    box.innerHTML = '';
+    box.appendChild(track);
+    // Even stilhouden zolang iemand met de muis of het toetsenbord in de rij zit.
+    box.onmouseenter = function () { gepauzeerd = true; };
+    box.onmouseleave = function () { gepauzeerd = false; };
+    box.onfocusin = function () { gepauzeerd = true; };
+    box.onfocusout = function () { gepauzeerd = false; };
+  }
 
   function start(items) {
-    var box = document.querySelector('.lb-home-news');
-    if (!box) return;
     if (timer) { clearInterval(timer); timer = null; }
+    gepauzeerd = false;
 
     var lijst = nieuwste(items);
-    box.innerHTML = '';
-    if (!lijst.length) return;
-
-    var track = document.createElement('div');
+    track = document.createElement('div');
     track.className = 'lb-home-news-track';
-    box.appendChild(track);
+    var box = document.querySelector('.lb-home-news');
+    if (box) box.innerHTML = '';
+    if (!lijst.length) { track = null; return; }
 
     var aantal = Math.min(ZICHTBAAR, lijst.length);
     for (var i = 0; i < aantal; i++) track.appendChild(kaart(lijst[i]));
+    koppel();
     if (lijst.length <= ZICHTBAAR) return; // niets om door te schuiven
 
     var volgende = aantal;
     var bezig = false;
-    var gepauzeerd = false;
     var rustig = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
     function stap() {
+      koppel();
       if (bezig || gepauzeerd || document.hidden) return;
       var nieuw = kaart(lijst[volgende]);
       volgende = (volgende + 1) % lijst.length;
@@ -99,13 +114,15 @@
       }, DUUR_MS + 30);
     }
 
-    // Even stilhouden zolang iemand met de muis of het toetsenbord in de rij zit.
-    box.onmouseenter = function () { gepauzeerd = true; };
-    box.onmouseleave = function () { gepauzeerd = false; };
-    box.onfocusin = function () { gepauzeerd = true; };
-    box.onfocusout = function () { gepauzeerd = false; };
-
     timer = setInterval(stap, INTERVAL_MS);
+  }
+
+  if (window.DC) {
+    var vorige = DC.afterRender;
+    DC.afterRender = function (root, c) {
+      if (vorige) vorige(root, c);
+      koppel();
+    };
   }
 
   document.addEventListener('nieuws:geladen', function (ev) { start(ev.detail || []); });
